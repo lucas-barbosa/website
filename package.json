@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "main personal website",
+  "main": "index.js", 
+  "private":true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alhashmicode/website.git"
+  },
+  "keywords": [
+    "alhashmicode"
+  ],
+  "author": "salah alhashmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alhashmicode/website/issues"
+  },
+  "homepage": "https://github.com/alhashmicode/website#readme"
+}
