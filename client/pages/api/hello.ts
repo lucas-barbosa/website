@@ -5,6 +5,10 @@ type Data = {
   name: string
 }
 
+interface welcome {
+  helloThere:string
+  welcome:string
+}
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
