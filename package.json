@@ -4,7 +4,6 @@
   "description": "main personal website",
   "main": "index.js",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"cross-env NODE_ENV=development nodemon index.js"
