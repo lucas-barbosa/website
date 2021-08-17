@@ -1,13 +1,22 @@
-import type { NextPage } from 'next'
-import {Fragment} from 'react';
+import type { NextPage } from "next";
+import React, { Fragment } from "react";
 
+// components
+
+import BackToUp from "../components/BackToUp";
+import FeatureSection from "../components/FeatureSection";
+import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
 
 const Home: NextPage = () => {
   return (
-    <div className="welcome">
-      welcome
-    </div>
-  )
-}
+    <Fragment>
+      <HeroSection/>
+      <FeatureSection/>
+      <BackToUp/>
+      <Footer/>
+    </Fragment>
+  );
+};
 
-export default Home
+export default Home;
