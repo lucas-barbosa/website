@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alhashmicode | Home</title>
+        <title>7san maraq | Home</title>
       </Head>
       <HeroSection />
       <CountsSection />
