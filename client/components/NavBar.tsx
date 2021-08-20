@@ -17,41 +17,41 @@ const NavBar: React.FC = () => {
 
           <nav id="navbar" className="navbar">
             <ul>
-              <li>
+              <li key={1}>
                 <Link href="/">
-                  <a className="nav-link scrollto active">Home</a>
+                  <a className="nav-link active">Home</a>
                 </Link>
               </li>
-              <li>
-                <Link href="/digtal-service">
-                  <a className="nav-link scrollto">Digtal Services</a>
+              <li key={2}>
+                <Link href="/services">
+                  <a className="nav-link">Digtal Services</a>
                 </Link>
               </li>
-              <li>
+              <li key={3}>
                 <Link href="/projects">
-                  <a className="nav-link scrollto">Projects</a>
+                  <a className="nav-link">Projects</a>
                 </Link>
               </li>
-              <li>
+              <li key={4}>
                 <Link href="/blogs">
-                  <a className="nav-link scrollto">Blogs</a>
+                  <a className="nav-link">Blogs</a>
                 </Link>
               </li>
-              <li>
+              <li key={5}>
                 <Link href="/#about">
                   <a className="nav-link scrollto" href="#about">
                     About
                   </a>
                 </Link>
               </li>
-              <li>
+              <li key={6}>
                 <Link href="/#contact">
                   <a className="nav-link scrollto" href="#contact">
                     Contact
                   </a>
                 </Link>
               </li>
-              <li>
+              <li key={7}>
                 <Link href="#subscribe">
                   <a className="subscribe scrollto" href="#subscribe">
                     subscribe

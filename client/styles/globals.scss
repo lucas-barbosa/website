@@ -4,14 +4,8 @@
 @import "./hero.scss";
 @import "./features.scss";
 @import "./about.scss";
-@import './back-to-up.scss';
-/**
-* Template Name: eNno - v4.3.0
-* Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
+@import "./back-to-up.scss";
+@import "./counts.scss";
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -96,27 +90,6 @@ body {
   
   
   
-  /*--------------------------------------------------------------
-  # Counts
-  --------------------------------------------------------------*/
-  .counts {
-    padding-top: 0;
-  }
-  
-  .counts .counters span {
-    font-size: 48px;
-    display: block;
-    color: #16df7e;
-    font-weight: 700;
-  }
-  
-  .counts .counters p {
-    padding: 0;
-    margin: 0 0 20px 0;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-  }
   
   /*--------------------------------------------------------------
   # Services

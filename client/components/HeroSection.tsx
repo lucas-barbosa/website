@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
             <div className="col-lg-6 order-1 order-lg-2 hero-img">
               <img
                 src="/images/intro.png"
-                className="img-fluid animated"
+                className="img-fluid animated box-shadow"
                 alt="hero development"
               />
             </div>
