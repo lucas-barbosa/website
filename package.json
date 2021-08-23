@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"cross-env NODE_ENV=development nodemon index.js"
+    "start":"cross-env NODE_ENV=development nodemon index.js",
+    "add":"git add . | git commit -m add"
   },
   "repository": {
     "type": "git",

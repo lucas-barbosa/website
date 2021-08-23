@@ -2,25 +2,23 @@ import type { NextPage } from "next";
 import React from "react";
 
 // components
-
 import Head from "next/head";
-import BackToUp from "../components/BackToUp";
-import FeatureSection from "../components/FeatureSection";
-import HeroSection from "../components/HeroSection";
-import ContactSection from "../components/ContactSection";
-import CountsSection from "../components/CountsSection";
+import BackToTop from "../components/layout/BackToTop";
+import FeatureSection from "../components/home/FeatureSection";
+import HeroSection from "../components/home/HeroSection";
+import ContactSection from "../components/home/ContactSection";
+import CountsSection from "../components/home/CountsSection";
 
 const Home: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>7san maraq | Home</title>
+        <title>Alhashmicode | Home</title>
       </Head>
       <HeroSection />
-      <CountsSection />
       <FeatureSection />
       <ContactSection />
-      <BackToUp />
+      <BackToTop />
     </React.Fragment>
   );
 };

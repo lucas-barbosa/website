@@ -4,7 +4,7 @@ import type {NextPage} from 'next';
 
 // components
 import Head from "next/head";
-import CountsSection from "../components/CountsSection";
+import CountsSection from "../components/home/CountsSection";
 
 
 const Projects:NextPage = () => {
