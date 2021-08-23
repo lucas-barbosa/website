@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
               <img
                 src="/images/hero.svg"
                 className="img-fluid"
-                alt="hero development"
+                alt="alhashmicode hero section, development vector image"
               />
             </div>
           </div>

@@ -11,9 +11,9 @@ const ContactSection: React.FC = () => {
           <div className="section-title">
             <div className="contact-title">
               <i className="bi bi-chat-right-text fs-1 p-2 text-primary"></i>
-              <h2>Contact with Me</h2>
+              <h2>Contact Us</h2>
             </div>
-            <p className="sub-title">Contact me by fill this message box</p>
+            <p className="sub-title">Contact Us by fill this message box</p>
           </div>
 
           <div className="row">
