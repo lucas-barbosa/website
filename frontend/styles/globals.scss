@@ -1,0 +1,40 @@
+$orange:#FB8D10;
+$d_orange:#FB8500;
+$yellow:#FEAF0B;
+$clue:#1A3D41;
+$d_clue:#0E3744;
+$d_blue:#023047;
+$blue:#219EBC;
+$w_blue:#8ECAE6;
+$clue_text:#5f687b;
+$primary:#0d6efd;
+$bg-light:#c8ced3;
+
+@import "./footer.scss";
+@import "./navbar.scss";
+@import "./hero.scss";
+@import "./features.scss";
+@import "./back-to-up.scss";
+@import "./contact.scss";
+@import "./counts.scss";
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* ,*::before, *::after {
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
+  font-family: 'Sora', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
