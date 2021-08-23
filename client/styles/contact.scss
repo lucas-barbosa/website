@@ -1,12 +1,14 @@
 /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
-.contact .info {
+.contact {
+  background-color: $bg-light;
+}
+  .contact .info {
   border-top: 3px solid #16df7e;
   border-bottom: 3px solid #16df7e;
   padding: 30px;
   width: 100%;
-  background-color: #f9f9fa;
 }
 
 .contact .info i {

@@ -3,13 +3,14 @@ import * as React from "react";
 // components
 import Image from "next/image";
 import Link from "next/link";
+import CountsSection from "./CountsSection";
 
 const FeatureSection: React.FC = () => {
   return (
     <React.Fragment>
       <section
         id="features"
-        className="container-lx  p-3 m-0 d-flex justify-content-center row align-items-center"
+        className="container-lx  p-3 mt-2 d-flex justify-content-center row align-items-center"
       >
         <div className="features-header text-center">
           <i className="bi bi-bookmark-star d-inline fs-1 p-2 text-primary"></i>
@@ -54,10 +55,12 @@ const FeatureSection: React.FC = () => {
               Some quick example text to build on the card title and make up the
               bulk of the card&apos;s content.
             </p>
-            <a href="#" className="page-link align-items-center justify-content-center">
-              <div className="text">view page</div>
-              <i className="bi bi-arrow-right-short features-icon"></i>
-            </a>
+            <Link href="/projects">
+              <a className="page-link align-items-center justify-content-center">
+                <div className="text">view page</div>
+                <i className="bi bi-arrow-right-short features-icon"></i>
+              </a>
+            </Link>
           </div>
         </div>
         {/* blogs card */}
@@ -74,13 +77,16 @@ const FeatureSection: React.FC = () => {
               Some quick example text to build on the card title and make up the
               bulk of the card&apos;s content.
             </p>
-            <a href="#" className="page-link align-items-center justify-content-center">
-              <div className="text">view page</div>
-              <i className="bi bi-arrow-right-short features-icon"></i>
-            </a>
+            <Link href="/blogs">
+              <a className="page-link align-items-center justify-content-center">
+                <div className="text">view page</div>
+                <i className="bi bi-arrow-right-short features-icon"></i>
+              </a>
+            </Link>
           </div>
         </div>
         {/*Count Component Section */}
+        <CountsSection />
       </section>
     </React.Fragment>
   );

@@ -8,7 +8,7 @@ $blue:#219EBC;
 $w_blue:#8ECAE6;
 $clue_text:#5f687b;
 $primary:#0d6efd;
-
+$bg-light:#c8ced3;
 
 @import "./footer.scss";
 @import "./navbar.scss";
@@ -16,6 +16,7 @@ $primary:#0d6efd;
 @import "./features.scss";
 @import "./back-to-up.scss";
 @import "./contact.scss";
+@import "./counts.scss";
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
