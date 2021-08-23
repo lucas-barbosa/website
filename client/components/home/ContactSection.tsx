@@ -1,17 +1,19 @@
 import React from "react";
 
+// components
+import Image from "next/image";
+
 const ContactSection: React.FC = () => {
   return (
     <React.Fragment>
-      <section id="contact" className="contact">
-        <div className="container">
+      <section id="contact" className="contact bg-light">
+        <div className="container pt-5">
           <div className="section-title">
-            <span>Contact</span>
-            <h2>Contact</h2>
-            <p>
-              Sit sint consectetur velit quisquam cupiditate impedit suscipit
-              alias
-            </p>
+            <div className="contact-title">
+              <i className="bi bi-chat-right-text fs-1 p-2 text-primary"></i>
+              <h2>Contact with Me</h2>
+            </div>
+            <p className="sub-title">Contact me by fill this message box</p>
           </div>
 
           <div className="row">
@@ -20,13 +22,13 @@ const ContactSection: React.FC = () => {
                 <div className="address">
                   <i className="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
-                  <p>not found</p>
+                  <p>Oman Muscat</p>
                 </div>
 
                 <div className="email">
                   <i className="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>alhashmis246@gmail.com</p>
                 </div>
 
                 <div className="phone">
@@ -35,12 +37,12 @@ const ContactSection: React.FC = () => {
                   <p>+none none</p>
                 </div>
 
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                  frameBorder="0"
-                  style={{border:0, width: "100%", height: "290px"}}
-                  allowFullScreen
-                ></iframe>
+                <Image
+                  src="/images/contact.png"
+                  width="450"
+                  height="450"
+                  alt="alhashicode contact vector image email location"
+                />
               </div>
             </div>
 
@@ -53,35 +55,57 @@ const ContactSection: React.FC = () => {
               >
                 <div className="row">
                   <div className="form-group col-md-6">
-                    <label htmlFor="name">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control"
-                      id="name"
-                      required
-                    />
+                    <label htmlFor="username">Your Name</label>
+
+                    <div className="input-group flex-nowrap">
+                      <span
+                        className="input-group-text bi bi-person fs-4"
+                        id="addon-wrapping"
+                      />
+                      <input
+                        type="text"
+                        id="username"
+                        className="form-control"
+                        aria-label="Username"
+                        aria-describedby="addon-wrapping"
+                        required
+                      />
+                    </div>
                   </div>
                   <div className="form-group col-md-6 mt-3 mt-md-0">
-                    <label htmlFor="name">Your Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
+                    <label htmlFor="email">Your Email</label>
+                    <div className="input-group flex-nowrap">
+                      <span
+                        className="input-group-text bi bi-envelope fs-4"
+                        id="addon-wrapping"
+                      />
+                      <input
+                        type="text"
+                        id="email"
+                        className="form-control"
+                        aria-label="Email"
+                        aria-describedby="addon-wrapping"
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="form-group mt-3">
-                  <label htmlFor="name">Subject</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="subject"
-                    id="subject"
-                    required
-                  />
+                  <label htmlFor="subject">Subject</label>
+                  <div className="input-group flex-nowrap">
+                    <span
+                      className="input-group-text bi bi-journals fs-4"
+                      id="addon-wrapping"
+                    />
+                    <input
+                      type="text"
+                      id="subject"
+                      className="form-control"
+                      aria-label="Subject"
+                      aria-describedby="addon-wrapping"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="form-group mt-3">
                   <label htmlFor="name">Message</label>
