@@ -10,7 +10,9 @@ const Blogs:NextPage = () => {
       <Head>
         <title>Alhashmicode | Blogs</title>
       </Head>
-      blogs page
+      <div>
+        welcome there
+      </div>
     </React.Fragment>
   );
 };
