@@ -40,9 +40,9 @@ const NavBar: React.FC = () => {
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <Link href="/">
-              <div className="btn">
-                <Image src="/images/favicon.png" width="65" height="70" />
-              </div>
+              <a className="btn">
+                <Image src="/images/favicon.png" width="65" height="70" alt="alhashmicode logo image"/>
+              </a>
             </Link>
           </h1>
 

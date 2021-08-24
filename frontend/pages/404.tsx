@@ -16,7 +16,7 @@ const NotFound = () => {
           ></Image>
           <h1 className="text-center">404 Error</h1>
           <p className="text-muted text-center fs-5">
-            We can't find the page you're looking for.
+            We can&apos;t find the page you&apos;re looking for.
           </p>
           <Link href="/">
             <a className="btn btn-primary">Back to Home</a>
