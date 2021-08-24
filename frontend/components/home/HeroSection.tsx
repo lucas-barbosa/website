@@ -5,7 +5,7 @@ import * as React from "react";
 const HeroSection: React.FC = () => {
   return (
     <React.Fragment>
-      <section id="hero" className="d-flex align-items-center bg-light">
+      <section id="hero" className="d-flex align-items-center intro">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">

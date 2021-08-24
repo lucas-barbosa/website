@@ -12,11 +12,14 @@ $bg-light:#c8ced3;
 
 @import "./footer.scss";
 @import "./navbar.scss";
-@import "./hero.scss";
-@import "./features.scss";
 @import "./back-to-up.scss";
-@import "./contact.scss";
-@import "./counts.scss";
+@import "./intro-section.scss";
+@import "./home/hero.scss";
+@import "./home/features.scss";
+@import "./home/contact.scss";
+@import "./home/counts.scss";
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/

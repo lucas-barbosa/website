@@ -1,7 +1,11 @@
 import Head from "next/head";
 
 const NotFound = () => {
-  return (<div>welcoem</div>);
+  return (
+    <div className="container-md">
+      welcome
+    </div>
+  );
 };
 
 export default NotFound;
