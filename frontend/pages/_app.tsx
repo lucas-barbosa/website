@@ -5,7 +5,7 @@ import React from "react";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective-subtle.css"
-import 'tippy.js/themes/light.css';
+import "tippy.js/themes/light.css";
 import "../styles/globals.scss";
 
 // components

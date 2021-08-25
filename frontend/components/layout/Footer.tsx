@@ -1,9 +1,17 @@
-import * as React from "react";
+import React,{useEffect} from "react";
+import tippy,{createSingleton} from "tippy.js";
 
 // components
 import Link from "next/link";
 
 const Footer: React.FC = () => {
+
+  useEffect(()=>{
+    tippy(".social-links a",{
+      theme:"light"
+    });
+  },[])
+
   return (
     <React.Fragment>
       <footer id="footer" className="bg-white">
@@ -11,7 +19,8 @@ const Footer: React.FC = () => {
           <div className="container">
             <div className="row  justify-content-center">
               <div className="col-lg-6">
-                <h3>Alhashmicode</h3>
+                <h3>Alguero</h3>
+                <h5 className="text-muted">Subscribe to get updated when new things get released!</h5>
               </div>
             </div>
             <div id="subscribe"className="row footer-newsletter justify-content-center">
@@ -32,6 +41,7 @@ const Footer: React.FC = () => {
                 href="https://discord.com/channels/879049803043053589/879049803550572645"
                 className="discord"
                 target="_tab"
+                data-tippy-content="Follow me in Discord"
               >
                 <i className="bi bi-discord"></i>
               </a>
@@ -39,6 +49,7 @@ const Footer: React.FC = () => {
                 href="https://www.facebook.com/salah.alhashmi.52"
                 className="facebook"
                 target="_tab"
+                data-tippy-content="Follow me in Facebook"
               >
                 <i className="bi bi-facebook"></i>
               </a>
@@ -46,6 +57,7 @@ const Footer: React.FC = () => {
                 href="https://www.instagram.com/alhashmicode"
                 className="instagram"
                 target="_tab"
+                data-tippy-content="Follow me in Instagram"
               >
                 <i className="bi bi-instagram"></i>
               </a>
@@ -53,6 +65,7 @@ const Footer: React.FC = () => {
                 href="https://github.com/alhashmicode"
                 className="github"
                 target="_tab"
+                data-tippy-content="Follow me in Github"
               >
                 <i className="bi bi-github"></i>
               </a>

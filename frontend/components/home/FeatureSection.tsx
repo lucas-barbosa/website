@@ -1,4 +1,6 @@
-import * as React from "react";
+import React,{useEffect} from "react";
+import tippy from "tippy.js";
+
 
 // components
 import Image from "next/image";
@@ -6,6 +8,21 @@ import Link from "next/link";
 import CountsSection from "./CountsSection";
 
 const FeatureSection: React.FC = () => {
+  useEffect(() =>{
+    
+    // tooltip shows when hover the card;
+    tippy(".page-link",{
+      content: "<h6 class='text-muted'>👆👨🏻‍💻 Click here to see more about this feature</h6>",
+      animation: "perspective-subtle",
+      placement: "bottom-start",
+      theme: "light",
+      maxWidth:180,
+      allowHTML:true,
+      delay:[100, 0],
+      hideOnClick:true,
+    })
+  },[])
+
   return (
     <React.Fragment>
       <section
@@ -29,9 +46,9 @@ const FeatureSection: React.FC = () => {
           />
           <div className="card-body">
             <h5 className="card-title">Digital Services</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card&apos;s content.
+            <p className="card-text text-muted">
+              get you dream projects done, with my digital services, figure out
+              the service you want.
             </p>
             <Link href="/services">
               <a className="page-link align-items-center justify-content-center">
@@ -51,9 +68,9 @@ const FeatureSection: React.FC = () => {
           />
           <div className="card-body">
             <h5 className="card-title">Projects</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card&apos;s content.
+            <p className="card-text text-muted">
+              this page is about showing my projects that I finished up
+              in my development work line.
             </p>
             <Link href="/projects">
               <a className="page-link align-items-center justify-content-center">
@@ -73,9 +90,9 @@ const FeatureSection: React.FC = () => {
           />
           <div className="card-body">
             <h5 className="card-title">Blogs</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card&apos;s content.
+            <p className="card-text text-muted">
+              Find out my interesting blogs I wrote about 
+              programming web development and technologies.
             </p>
             <Link href="/blogs">
               <a className="page-link align-items-center justify-content-center">

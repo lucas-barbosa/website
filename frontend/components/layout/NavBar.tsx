@@ -25,11 +25,11 @@ const NavBar: React.FC = () => {
     // tooltip handler with (tippy.js)
 
     tippy(".subscribe", {
-      content: "<h5 class='text-muted'>subscribe to get updated when new things Released! 💌🙂</h5>",
+      content: "<h6 class='text-muted'> 💌🙂 subscribe to get updated when new things Released!</h6>",
       animation: "perspective-subtle",
       placement: "bottom",
       theme: "light",
-      maxWidth:190,
+      maxWidth:195,
       allowHTML:true,
       delay:[200, 0],
       hideOnClick:true,
