@@ -1,4 +1,5 @@
 import React, { FormEvent, useEffect } from "react";
+import tippy from "tippy.js";
 
 //components
 import Link from "next/link";
@@ -19,6 +20,19 @@ const NavBar: React.FC = () => {
     };
     selectDropdownEl.forEach((e: any) => {
       e.addEventListener("click", toggleDropDownHanlder);
+    });
+
+    // tooltip handler with (tippy.js)
+
+    tippy(".subscribe", {
+      content: "<h5 class='text-muted'>subscribe to get updated when new things Released! 💌🙂</h5>",
+      animation: "perspective-subtle",
+      placement: "bottom",
+      theme: "light",
+      maxWidth:190,
+      allowHTML:true,
+      delay:[200, 0],
+      hideOnClick:true,
     });
   }, []);
 
@@ -41,7 +55,12 @@ const NavBar: React.FC = () => {
           <h1 className="logo">
             <Link href="/">
               <a className="btn">
-                <Image src="/images/favicon.png" width="65" height="70" alt="alhashmicode logo image"/>
+                <Image
+                  src="/images/favicon.png"
+                  width="65"
+                  height="70"
+                  alt="alhashmicode logo image"
+                />
               </a>
             </Link>
           </h1>
@@ -82,30 +101,48 @@ const NavBar: React.FC = () => {
                 </a>
                 <ul>
                   <li>
-                    <a href="https://github.com/alhashmicode" className="text-center" target="_tab">
+                    <a
+                      href="https://github.com/alhashmicode"
+                      className="text-center"
+                      target="_tab"
+                    >
                       <div className="socials-link">
-                         <i className="bi bi-github fs-5 px-1 text-dark"></i> github
+                        <i className="bi bi-github fs-5 px-1 text-dark"></i>{" "}
+                        github
                       </div>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/alhashmicode" className="text-center" target="_tab">
+                    <a
+                      href="https://www.instagram.com/alhashmicode"
+                      className="text-center"
+                      target="_tab"
+                    >
                       <div className="socials-link">
-                        <i className="bi bi-instagram fs-5 px-1 text-danger"></i> instagram
+                        <i className="bi bi-instagram fs-5 px-1 text-danger"></i>{" "}
+                        instagram
                       </div>
                     </a>
                   </li>
                   <li>
-                    <a href="https://discord.com/channels/879049803043053589/879049803550572645" target="_tab">
+                    <a
+                      href="https://discord.com/channels/879049803043053589/879049803550572645"
+                      target="_tab"
+                    >
                       <div className="socials-link">
-                        <i className="bi bi-discord fs-5 px-1 text-info"></i> discord
+                        <i className="bi bi-discord fs-5 px-1 text-info"></i>{" "}
+                        discord
                       </div>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.facebook.com/salah.alhashmi.52" target="_tab">
+                    <a
+                      href="https://www.facebook.com/salah.alhashmi.52"
+                      target="_tab"
+                    >
                       <div className="socials-link">
-                        <i className="bi bi-facebook fs-5 px-1 text-primary"></i> facebook
+                        <i className="bi bi-facebook fs-5 px-1 text-primary"></i>{" "}
+                        facebook
                       </div>
                     </a>
                   </li>

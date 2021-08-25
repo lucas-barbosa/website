@@ -1,10 +1,14 @@
-import "../node_modules/bootstrap/scss/bootstrap.scss";
-import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import React from "react";
 
-// components
+// styles
+import "../node_modules/bootstrap/scss/bootstrap.scss";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/perspective-subtle.css"
+import 'tippy.js/themes/light.css';
+import "../styles/globals.scss";
 
+// components
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 

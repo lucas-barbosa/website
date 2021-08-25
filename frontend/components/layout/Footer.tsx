@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <h3>Alhashmicode</h3>
               </div>
             </div>
-            <div className="row footer-newsletter justify-content-center">
+            <div id="subscribe"className="row footer-newsletter justify-content-center">
               <div className="col-lg-6">
                 <form method="post">
                   <input

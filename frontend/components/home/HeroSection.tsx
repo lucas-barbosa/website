@@ -1,5 +1,4 @@
 import * as React from "react";
-// import Image from "next/image";
 
 
 const HeroSection: React.FC = () => {
@@ -9,7 +8,7 @@ const HeroSection: React.FC = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-              <h1>Build your dream projects and skill faster</h1>
+              <h1>Build your dream projects and skills faster</h1>
               <h2>
                 Welcome to my personal website,I am alhashmicode full stack web developer
               </h2>
