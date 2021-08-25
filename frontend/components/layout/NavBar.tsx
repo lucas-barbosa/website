@@ -89,9 +89,9 @@ const NavBar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/blogs">
+                <Link href="/docs">
                   <a onClick={linksClickHandler} className="nav-link">
-                    Blogs
+                    Documents
                   </a>
                 </Link>
               </li>

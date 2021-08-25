@@ -34,7 +34,7 @@ const CountsSection: React.FC = () => {
               <div className="count-box">
                 <i className="bi bi-journal-text"></i>
                 <span className="purecounter">1</span>
-                <p>Blogs</p>
+                <p>Documents</p>
               </div>
             </div>
           </div>

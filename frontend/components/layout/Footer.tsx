@@ -90,8 +90,8 @@ const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/blogs">
-                <a className="text-muted me-3">Blogs</a>
+              <Link href="/docs">
+                <a className="text-muted me-3">Documents</a>
               </Link>
             </li>
           </ul>

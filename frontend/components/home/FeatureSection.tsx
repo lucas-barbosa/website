@@ -89,12 +89,12 @@ const FeatureSection: React.FC = () => {
             alt="alhashicode image blogs developer"
           />
           <div className="card-body">
-            <h5 className="card-title">Blogs</h5>
+            <h5 className="card-title">Documents</h5>
             <p className="card-text text-muted">
-              Find out my interesting blogs I wrote about 
+              Find out my interesting documents I wrote about 
               programming web development and technologies.
             </p>
-            <Link href="/blogs">
+            <Link href="/docs">
               <a className="page-link align-items-center justify-content-center">
                 <div className="text">view page</div>
                 <i className="bi bi-arrow-right-short features-icon"></i>

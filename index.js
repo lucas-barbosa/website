@@ -1,15 +1,37 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import morgan from 'morgan';
+const express = require("express");
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const path = require("path");
 
-require('dotenv').config()
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-const test = process.env.DATABASE_URI
+
+if (process.env.NODE_ENV === "production") {
+  require("dotenv").config({
+    path: path.resolve(__dirname, ".env"),
+  });
+} else {
+  require("dotenv").config({
+    path: path.resolve(__dirname, ".env.dev"),
+  });
+}
 
 // middleware
+app.use(morgan("common"));
 
-// routes
+// routess
 
-// listen
+// connect to DB and listen
+
+mongoose.connect(
+  process.env.DATABASE_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  (err) => {
+    if (err) throw err;
+
+    app.listen(PORT, () => {
+      console.log(`app listening in PORT :${PORT}`);
+    });
+  }
+);

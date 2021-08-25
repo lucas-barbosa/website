@@ -8,7 +8,7 @@ const Blogs:NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alhashmicode | Blogs</title>
+        <title>Alhashmicode | Documents</title>
       </Head>
       <div>
         welcome there
