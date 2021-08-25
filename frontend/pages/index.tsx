@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alhashmicode | Home</title>
+        <title>Alguero | Home</title>
       </Head>
       <HeroSection />
       <FeatureSection />

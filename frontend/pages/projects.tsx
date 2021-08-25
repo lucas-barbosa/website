@@ -11,7 +11,7 @@ const Projects:NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alhashmicode | Projects</title>
+        <title>Alguero | Projects</title>
       </Head>
 
       <CountsSection />
