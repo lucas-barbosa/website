@@ -22,19 +22,19 @@ const ContactSection: React.FC = () => {
                 <div className="address">
                   <i className="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
-                  <p>Oman Muscat</p>
+                  <p>{process.env.location}</p>
                 </div>
 
                 <div className="email">
                   <i className="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>alhashmis246@gmail.com</p>
+                  <p>{process.env.email}</p>
                 </div>
 
                 <div className="phone">
                   <i className="bi bi-phone"></i>
                   <h4>Call:</h4>
-                  <p>+none none</p>
+                  <p>{process.env.call}</p>
                 </div>
 
                 <Image

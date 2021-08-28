@@ -38,15 +38,15 @@ const Footer: React.FC = () => {
 
             <div className="social-links">
               <a
-                href="https://discord.com/channels/879049803043053589/879049803550572645"
+                href={process.env.discord}
                 className="discord"
                 target="_tab"
-                data-tippy-content="Follow me in Discord"
+                data-tippy-content="join me in Discord server"
               >
                 <i className="bi bi-discord"></i>
               </a>
               <a
-                href="https://www.facebook.com/salah.alhashmi.52"
+                href={process.env.facebook}
                 className="facebook"
                 target="_tab"
                 data-tippy-content="Follow me in Facebook"
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                 <i className="bi bi-facebook"></i>
               </a>
               <a
-                href="https://www.instagram.com/alhashmicode"
+                href={process.env.instagram}
                 className="instagram"
                 target="_tab"
                 data-tippy-content="Follow me in Instagram"
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                 <i className="bi bi-instagram"></i>
               </a>
               <a
-                href="https://github.com/alhashmicode"
+                href={process.env.github}
                 className="github"
                 target="_tab"
                 data-tippy-content="Follow me in Github"
@@ -100,13 +100,13 @@ const Footer: React.FC = () => {
           <div className="copyright">
             &copy; Copyright{" "}
             <strong>
-              <span>Alhashmicode</span>
+              <span>Alguero</span>
             </strong>
             . All Rights Reserved
           </div>
           <div className="credits">
             Designed by{" "}
-            <a href="https://alhashmicode.vercel.app/">alhashmicode</a>
+            <a href={process.env.github} target="_tab">Alguerocode</a>
           </div>
         </div>
       </footer>

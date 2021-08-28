@@ -102,7 +102,7 @@ const NavBar: React.FC = () => {
                 <ul>
                   <li>
                     <a
-                      href="https://github.com/alhashmicode"
+                      href={process.env.github}
                       className="text-center"
                       target="_tab"
                     >
@@ -114,7 +114,7 @@ const NavBar: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://www.instagram.com/alhashmicode"
+                      href={process.env.instagram}
                       className="text-center"
                       target="_tab"
                     >
@@ -126,7 +126,7 @@ const NavBar: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://discord.com/channels/879049803043053589/879049803550572645"
+                      href={process.env.discord}
                       target="_tab"
                     >
                       <div className="socials-link">
@@ -137,7 +137,7 @@ const NavBar: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://www.facebook.com/salah.alhashmi.52"
+                      href={process.env.facebook}
                       target="_tab"
                     >
                       <div className="socials-link">
