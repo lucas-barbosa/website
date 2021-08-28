@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import React from "react";
+import React, { useEffect } from "react";
 
 // styles
 import "../node_modules/bootstrap/scss/bootstrap.scss";

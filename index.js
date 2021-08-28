@@ -20,8 +20,6 @@ if (process.env.NODE_ENV === "production") {
 // middleware
 app.use(morgan("common"));
 
-// routess
-
 // connect to DB and listen
 
 mongoose.connect(
@@ -35,3 +33,7 @@ mongoose.connect(
     });
   }
 );
+
+// routes
+
+app.use("/projects",require("./routes/projects"));
