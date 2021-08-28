@@ -91,8 +91,8 @@ const FeatureSection: React.FC = () => {
           <div className="card-body">
             <h5 className="card-title">Documents</h5>
             <p className="card-text text-muted">
-              Find out my interesting documents I wrote about 
-              programming web development and technologies.
+              Find out my interesting docs I wrote about 
+              programming and web development.
             </p>
             <Link href="/docs">
               <a className="page-link align-items-center justify-content-center">
