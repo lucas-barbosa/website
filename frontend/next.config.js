@@ -50,7 +50,13 @@ module.exports = (phase) => {
       location: "Oman Muscat",
 
       // backend section info
-      backend_url:isProd ? "https://api.alguero.tk" : "http://localhost:8080"
+      backend_url:isProd ? "https://api.alguero.tk" : "http://localhost:8080",
+
+      //github states image URL
+      language_states:"https://github-readme-stats.vercel.app/api/top-langs?username=alguerocode&show_icons=true&locale=en&layout=compact",
+      github_states:"https://github-readme-stats.vercel.app/api?username=alguerocode&show_icons=true&locale=en",
+      streak_states:"https://github-readme-streak-stats.herokuapp.com/?user=alguerocode&"
+
     },
     redirects
   };

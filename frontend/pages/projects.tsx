@@ -4,8 +4,7 @@ import type {NextPage} from 'next';
 
 // components
 import Head from "next/head";
-import CountsSection from "../components/home/CountsSection";
-
+import HeroSection from "../components/projects/heroSection";
 
 const Projects:NextPage = () => {
   return (
@@ -14,7 +13,7 @@ const Projects:NextPage = () => {
         <title>Alguero | Projects</title>
       </Head>
 
-      <CountsSection />
+      <HeroSection />
     </React.Fragment>
   );
 };
