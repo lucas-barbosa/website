@@ -4,7 +4,7 @@ import React from "react";
 // styles
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import "tippy.js/dist/tippy.css";
-import "tippy.js/animations/perspective-subtle.css"
+import "tippy.js/animations/perspective-subtle.css";
 import "tippy.js/themes/light.css";
 import "../styles/globals.scss";
 
@@ -14,9 +14,8 @@ import Layout from "../components/layout/layout";
 
 // store
 import store from "../store/store";
-import {Provider} from "react-redux";
-import withRedux from "next-redux-wrapper";
-
+import { Provider } from "react-redux";
+import { createWrapper } from "next-redux-wrapper";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -30,12 +29,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         ></link>
       </Head>
       <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     </React.Fragment>
   );
 }
-const makeStore = () => store;
-export default withRedux(makeStore)(MyApp);
+
+// wrapper MyApp with redux
+const wrapper = createWrapper(() => store, { debug: true });
+export default wrapper.withRedux(MyApp);

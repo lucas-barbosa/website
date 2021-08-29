@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup":"npx react-codemod rename-unsafe-lifecycles ./node_modules/next-redux-wrapper"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
