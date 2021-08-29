@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import React, { useEffect } from "react";
+import React from "react";
 
 // styles
 import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -12,6 +12,12 @@ import "../styles/globals.scss";
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 
+// store
+import store from "../store/store";
+import {Provider} from "react-redux";
+import withRedux from "next-redux-wrapper";
+
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
@@ -23,10 +29,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
         ></link>
       </Head>
+      <Provider store={store}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      </Provider>
     </React.Fragment>
   );
 }
-export default MyApp;
+const makeStore = () => store;
+export default withRedux(makeStore)(MyApp);

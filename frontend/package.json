@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
     "bootstrap": "^5.1.0",
     "next": "11.1.0",
+    "next-redux-wrapper": "^7.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
     "sass": "^1.38.0",
     "tippy.js": "^6.3.1"
   },
