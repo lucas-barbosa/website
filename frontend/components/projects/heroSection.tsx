@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
               className="status-img z-index-2"
               loader={({src}):string => src}
               src={process.env.language_states}
-              alt="alguerocode github most language status, image"
+              alt="alguerocode github most language states, image"
             />
             &nbsp;
             <Image
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
               className="status-img"
               loader={({src}):string => src}
               src={process.env.github_states}
-              alt="alguerocode github status, image"
+              alt="alguerocode github states, image"
             />
             <Image
               width="380"
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
               className="ms-1 status-img"
               loader={({src}):string => src}
               src={process.env.streak_states}
-              alt="alguerocode github streak status, image"
+              alt="alguerocode github streak states, image"
             />
           </div>
         </div>

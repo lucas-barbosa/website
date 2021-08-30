@@ -9,11 +9,10 @@ import Dashboard from "../components/projects/dashboard";
 
 const Projects:NextPage = () => {
   return (
-    <React.Fragment>
+    <React.Fragment> 
       <Head>
         <title>Alguero | Projects</title>
-        <link rel="stylesheet" href="/styles/projects/hero.css" />
-        <link rel="stylesheet" href="/styles/projects/dashboard.css" />
+        <link rel="stylesheet" href="/styles/projects.css" />
       </Head>
       <HeroSection />
       <Dashboard/>
