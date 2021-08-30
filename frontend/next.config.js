@@ -31,6 +31,14 @@ module.exports = (phase) => {
   return {
     reactStrictMode: true,
     env: {
+      // ignore type checking when build to production and deploy
+      typescript: {
+        // !! WARN !!
+        // Dangerously allow production builds to successfully complete even if
+        // your project has type errors.
+        // !! WARN !!
+        ignoreBuildErrors: true,
+      },
       // social media links
       url: "https://alguero.tk",
       github: "https://github.com/alguerocode",
