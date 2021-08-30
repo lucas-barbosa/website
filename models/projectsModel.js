@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 const projectsSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
-    avatar: { type: String, required: true },
-    description: { type: String, required: true },
     github_watcher_count_link: { type: String, required: true },
     github_link: { type: String, required: true },
     github_stars_count_link: { type: String, required: true },
