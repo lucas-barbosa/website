@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
               unoptimized={true}
               className="status-img z-index-2"
               loader={({src}):string => src}
-              src={process.env.language_states}
+              src={`${process.env.language_states}`} // add quotes for deploay cache
               alt="alguerocode github most language states, image"
             />
             <Image
@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
               unoptimized={true}
               className="status-img ms-2"
               loader={({src}):string => src}
-              src={process.env.github_states}
+              src={`${process.env.github_states}`} // add quotes for deploay cache
               alt="alguerocode github states, image"
             />
             <Image
@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
               unoptimized={true}
               className="ms-2 status-img"
               loader={({src}):string => src}
-              src={process.env.streak_states}
+              src={`${process.env.streak_states}`} // add quotes for deploay cache
               alt="alguerocode github streak states, image"
             />
           </div>
