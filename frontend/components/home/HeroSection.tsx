@@ -1,6 +1,7 @@
 import React,{useEffect} from "react";
 import tippy from "tippy.js";
 
+// components
 
 const HeroSection: React.FC = () => {
 

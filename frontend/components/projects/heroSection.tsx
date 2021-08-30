@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
               width="320"
               height="170"
               className="status-img z-index-2"
-              loader={() => process.env.language_states}
+              loader={(src:string, width:number) => src + `&w=${width}`}
               src={process.env.language_states}
               alt="alguerocode github most language status image"
             />
@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
               width="380"
               height="170"
               className="status-img"
-              loader={() => process.env.github_states}
+              loader={(src:string, width:number) => src + `&w=${width}`}
               src={process.env.github_states}
               alt="alguerocode github status image"
             />
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
               width="380"
               height="170"
               className="ms-1 status-img"
-              loader={() => process.env.streak_states}
+              loader={(src:string, width:number) => src + `&w=${width}`}
               src={process.env.streak_states}
               alt="alguerocode github streak status image"
             />
