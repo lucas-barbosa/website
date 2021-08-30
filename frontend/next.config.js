@@ -31,6 +31,7 @@ module.exports = (phase) => {
   return {
     reactStrictMode: true,
     env: {
+      distDir: 'build',
       // ignore type checking when build to production and deploy
       typescript: {
         // !! WARN !!
