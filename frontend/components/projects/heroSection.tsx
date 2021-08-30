@@ -21,29 +21,29 @@ const HeroSection: React.FC = () => {
               width="320"
               height="170"
               className="status-img z-index-2"
-              loader={(src:string, width:number) => src + `&w=${width}`}
+              loader={()=>process.env.language_states}
               src={process.env.language_states}
-              alt="alguerocode github most language status image"
+              alt="alguerocode github most language status, image"
             />
             &nbsp;
             <Image
               width="380"
               height="170"
               className="status-img"
-              loader={(src:string, width:number) => src + `&w=${width}`}
+              loader={() => process.env.github_states}
               src={process.env.github_states}
-              alt="alguerocode github status image"
+              alt="alguerocode github status, image"
             />
             <Image
               width="380"
               height="170"
               className="ms-1 status-img"
-              loader={(src:string, width:number) => src + `&w=${width}`}
+              loader={()=>process.env.steak_states}
               src={process.env.streak_states}
-              alt="alguerocode github streak status image"
+              alt="alguerocode github streak status, image"
             />
           </div>
-        </div>
+        </div> 
       </div>
     </React.Fragment>
   );
