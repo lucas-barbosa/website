@@ -15,19 +15,19 @@ const HeroSection: React.FC = () => {
           <p className="lead sub-title text-center">
             showing my projects that I finished up in my development work line.
           </p>
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center align-items-center mb-3">
             <a
-              className="btn btn-view btn-warning text-white fs-4 m-1 mb-3 p-2 lead"
+              className="btn btn-view btn-warning text-white fs-5 m-1 p-2 px-3 lead"
               href="#dashboard"
-            >
+            > 
               view projects<i className="bi bi-arrow-right-short m-1 fs-5"></i>
             </a>
             <a
-              className="btn btn-github  btn-warning text-white m-1 mb-3 fs-5 p-2 px-3 lead"
+              className="btn btn-github  btn-warning text-white m-1 fs-5 p-2 px-3 lead"
               target="_tab"
               href={process.env.github}
             >
-              <i className="bi bi-github m-1 fs-4"></i> Github profile
+              <i className="bi bi-github m-1 fs-5"></i> Github profile
             </a>
           </div>
         </header>
