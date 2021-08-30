@@ -13,6 +13,7 @@ const Projects:NextPage = () => {
       <Head>
         <title>Alguero | Projects</title>
         <link rel="stylesheet" href="/styles/projects/hero.css" />
+        <link rel="stylesheet" href="/styles/projects/dashboard.css" />
       </Head>
       <HeroSection />
       <Dashboard/>
