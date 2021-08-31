@@ -43,7 +43,7 @@ module.exports = (phase) => {
       projects_count: "+100",
       clients_count: "1",
       docs_count: "1",
-      coding_years_count: "2",
+      coding_years_count: "2.5",
 
       // contact section info
       email: "not found",
@@ -60,6 +60,76 @@ module.exports = (phase) => {
         "https://github-readme-stats.vercel.app/api?username=alguerocode&show_icons=true&locale=en",
       streak_states:
         "https://github-readme-streak-stats.herokuapp.com/?user=alguerocode&",
+      project_categories:[
+        {
+          category:"reactJS",
+          count:12
+        },
+        {
+          category:"javascript",
+          count: 7
+        },
+        {
+          category:"html",
+          count:18
+        },
+        {
+          category:"css",
+          count:14
+        },
+        {
+          category:"nodeJS",
+          count:4
+        },
+        {
+          category:"postgreSQL",
+          count:2
+        },
+        {
+          category:"expressJS",
+          count:4
+        },
+        {
+          category:"redux",
+          count:5
+        },
+        {
+          category:"bootstrap",
+          count:1
+        },
+        {
+          category:"mongoDB",
+          count:2
+        },
+        {
+          category:"nextJS",
+          count:1
+        },
+        {
+          category:"JWT",
+          count:1
+        },
+        {
+          category:"DSA",
+          count:1
+        },
+        {
+          category:"fun projects",
+          count:14
+        },
+        {
+          category:"boilerplate",
+          count:2
+        },
+        {
+          category:"npm packages",
+          count:1
+        },
+        {
+          category:"readme",
+          count:1
+        },
+      ]
     },
     redirects,
     // image optimization
