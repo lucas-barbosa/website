@@ -62,6 +62,10 @@ module.exports = (phase) => {
         "https://github-readme-streak-stats.herokuapp.com/?user=alguerocode&",
       project_categories:[
         {
+          category:"all",
+          count:"30"
+        },
+        {
           category:"reactJS",
           count:12
         },
