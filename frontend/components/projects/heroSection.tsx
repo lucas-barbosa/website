@@ -33,13 +33,17 @@ const HeroSection: React.FC = () => {
         </header>
         <div className="row">
           <div className="col container-lg justify-content-center align-items-center d-flex flex-wrap">
+            {/*add quotes to src attribute to ignore  
+               type checking when i deploy to vercel.
+               `${something}`
+            */}   
             <Image
               width="320"
               height="170"
               unoptimized={true}
               className="status-img z-index-2"
               loader={({src}):string => src}
-              src={`${process.env.language_states}`} // add quotes for deploay cache
+              src={`${process.env.language_states}`}
               alt="alguerocode github most language states, image"
             />
             <Image
@@ -48,7 +52,7 @@ const HeroSection: React.FC = () => {
               unoptimized={true}
               className="status-img ms-2"
               loader={({src}):string => src}
-              src={`${process.env.github_states}`} // add quotes for deploay cache
+              src={`${process.env.github_states}`}
               alt="alguerocode github states, image"
             />
             <Image
@@ -57,7 +61,7 @@ const HeroSection: React.FC = () => {
               unoptimized={true}
               className="ms-2 status-img"
               loader={({src}):string => src}
-              src={`${process.env.streak_states}`} // add quotes for deploay cache
+              src={`${process.env.streak_states}`}
               alt="alguerocode github streak states, image"
             />
           </div>

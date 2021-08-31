@@ -31,14 +31,6 @@ module.exports = (phase) => {
   return {
     reactStrictMode: true,
     env: {
-      // ignore type checking when build to production and deploy
-      typescript: {
-        // !! WARN !!
-        // Dangerously allow production builds to successfully complete even if
-        // your project has type errors.
-        // !! WARN !!
-        ignoreBuildErrors: true,
-      },
       // social media links
       url: "https://alguero.tk",
       github: "https://github.com/alguerocode",
@@ -58,7 +50,7 @@ module.exports = (phase) => {
       call: "+none none",
       location: "Oman Muscat",
 
-      // backend section info
+      // backend API section info
       backend_url: isProd ? "https://api.alguero.tk" : "http://localhost:8080",
 
       //github states image URL

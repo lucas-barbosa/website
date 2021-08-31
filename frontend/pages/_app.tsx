@@ -38,5 +38,5 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 // wrapper MyApp with redux
-const wrapper = createWrapper(() => store, { debug: true });
+const wrapper = createWrapper(() => store, { debug: process.env.NODE_ENV === 'development'});
 export default wrapper.withRedux(MyApp);
