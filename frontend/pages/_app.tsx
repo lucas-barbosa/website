@@ -12,12 +12,8 @@ import "../styles/globals.scss";
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 
-// store
-import store from "../store/store";
-import { Provider } from "react-redux";
-import { createWrapper } from "next-redux-wrapper";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
       <Head>
@@ -28,15 +24,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
         ></link>
       </Head>
-      <Provider store={store}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </Provider>
     </React.Fragment>
   );
 }
-
-// wrapper MyApp with redux
-const wrapper = createWrapper(() => store, { debug: process.env.NODE_ENV === 'development'});
-export default wrapper.withRedux(MyApp);

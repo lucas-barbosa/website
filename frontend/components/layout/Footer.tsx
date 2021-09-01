@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
               <a
                 href={process.env.discord}
                 className="discord"
-                target="_tab"
+                target="_blank"
                 data-tippy-content="join me in Discord server"
               >
                 <i className="bi bi-discord"></i>
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               <a
                 href={process.env.facebook}
                 className="facebook"
-                target="_tab"
+                target="_blank"
                 data-tippy-content="Follow me in Facebook"
               >
                 <i className="bi bi-facebook"></i>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
               <a
                 href={process.env.instagram}
                 className="instagram"
-                target="_tab"
+                target="_blank"
                 data-tippy-content="Follow me in Instagram"
               >
                 <i className="bi bi-instagram"></i>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               <a
                 href={process.env.github}
                 className="github"
-                target="_tab"
+                target="_blank"
                 data-tippy-content="Follow me in Github"
               >
                 <i className="bi bi-github"></i>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="credits">
             Designed by{" "}
-            <a href={process.env.github} target="_tab">Alguerocode</a>
+            <a href={process.env.github} target="_blank">Alguerocode</a>
           </div>
         </div>
       </footer>

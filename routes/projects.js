@@ -1,7 +1,10 @@
 const express = require('express');
+const projectsController = require("../controllers/projects");
 
-const projectRouter = express.Router();
+const projectsRouter = express.Router();
+
+projectsRouter.get("/",projectsController.get_all_projects);
+projectsRouter.get("/:category",projectsController.get_by_category);
 
 
-
-module.exports = projectRouter;
+module.exports = projectsRouter;

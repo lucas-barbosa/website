@@ -6,7 +6,6 @@ hero section
   width: 100%;
   height: 50vh;
   padding-top: 82px;
-  background-color: #ffffff !important;
   background-image: linear-gradient(
     135deg,
     #0061f2 0%,
@@ -44,9 +43,13 @@ dashboard section
 .count-span {
   background-color: #FB8D10;
 }
+
 #dashboard .buttons button:hover {
   box-shadow: 0 8px 28px 0 #3d88f8;
   background-color: #0d6efd!important;
+}
+#dashboard .my-projects {
+  height: 40rem;
 }
 #dashboard .buttons button {
  transition: all 0.2s!important;

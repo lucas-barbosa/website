@@ -51,7 +51,7 @@ module.exports = (phase) => {
       location: "Oman Muscat",
 
       // backend API section info
-      backend_url: isProd ? "https://api.alguero.tk" : "http://localhost:8080",
+      BACKEND_API: isProd ? "https://api.alguero.tk" : "http://localhost:8080",
 
       //github states image URL
       language_states:
@@ -60,89 +60,7 @@ module.exports = (phase) => {
         "https://github-readme-stats.vercel.app/api?username=alguerocode&show_icons=true&locale=en",
       streak_states:
         "https://github-readme-streak-stats.herokuapp.com/?user=alguerocode&",
-      project_categories:[
-        {
-          category:"all",
-          count:"30"
-        },
-        {
-          category:"reactJS",
-          count:12
-        },
-        {
-          category:"javascript",
-          count: 7
-        },
-        {
-          category:"html",
-          count:18
-        },
-        {
-          category:"css",
-          count:14
-        },
-        {
-          category:"nodeJS",
-          count:4
-        },
-        {
-          category:"postgreSQL",
-          count:2
-        },
-        {
-          category:"expressJS",
-          count:4
-        },
-        {
-          category:"redux",
-          count:5
-        },
-        {
-          category:"bootstrap",
-          count:1
-        },
-        {
-          category:"mongoDB",
-          count:2
-        },
-        {
-          category:"nextJS",
-          count:1
-        },
-        {
-          category:"JWT",
-          count:1
-        },
-        {
-          category:"DSA",
-          count:1
-        },
-        {
-          category:"fun projects",
-          count:14
-        },
-        {
-          category:"boilerplate",
-          count:2
-        },
-        {
-          category:"npm packages",
-          count:1
-        },
-        {
-          category:"readme",
-          count:1
-        },
-      ]
     },
     redirects,
-    // image optimization
-    images: { 
-      domains: [
-        "https://github-readme-stats.vercel.app/api/top-langs?username=alguerocode&show_icons=true&locale=en&layout=compact",
-        "https://github-readme-stats.vercel.app/api?username=alguerocode&show_icons=true&locale=en",
-        "https://github-readme-streak-stats.herokuapp.com/?user=alguerocode&",
-      ],
-    },
   };
 };
