@@ -75,6 +75,7 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
                   <a
                     href={`https://github.com/alguerocode/${project.repoName}`}
                     className="github-link"
+                    rel="noreferrer"
                     target="_blank"
                     key={project._id}
                   >
