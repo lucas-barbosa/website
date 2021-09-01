@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import type { ProjectsProps } from "../../pages/projects";
 import { API } from "../../api/axios";
 
+
 const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
   const [curProjects, setCurProjects] = useState(projects);
   const [showSpinner, setSpinner] = useState(false);

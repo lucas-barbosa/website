@@ -105,6 +105,7 @@ const NavBar: React.FC = () => {
                       href={process.env.github}
                       className="text-center"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="socials-link">
                         <i className="bi bi-github fs-5 px-1 text-dark"></i>{" "}
@@ -117,6 +118,7 @@ const NavBar: React.FC = () => {
                       href={process.env.instagram}
                       className="text-center"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="socials-link">
                         <i className="bi bi-instagram fs-5 px-1 text-danger"></i>{" "}
@@ -128,6 +130,7 @@ const NavBar: React.FC = () => {
                     <a
                       href={process.env.discord}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="socials-link">
                         <i className="bi bi-discord fs-5 px-1 text-info"></i>{" "}
@@ -139,6 +142,7 @@ const NavBar: React.FC = () => {
                     <a
                       href={process.env.facebook}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="socials-link">
                         <i className="bi bi-facebook fs-5 px-1 text-primary"></i>{" "}
