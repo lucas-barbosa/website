@@ -3,19 +3,12 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const path = require("path");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-if (process.env.NODE_ENV === "production") {
-  require("dotenv").config({
-    path: path.resolve(__dirname, ".env"),
-  });
-} else {
-  require("dotenv").config({
-    path: path.resolve(__dirname, ".env.dev"),
-  });
-}
+
 
 // middleware
 app.use(morgan("dev"));
