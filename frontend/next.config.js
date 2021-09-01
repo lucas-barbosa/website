@@ -51,7 +51,7 @@ module.exports = (phase) => {
       location: "Oman Muscat",
 
       // backend API section info
-      BACKEND_API: isProd ? "https://api.alguero.tk" : "http://localhost:8080",
+      BACKEND_API: isProd ? "https://alguero.herokuapp.com/" : "http://localhost:8080",
 
       //github states image URL
       language_states:
