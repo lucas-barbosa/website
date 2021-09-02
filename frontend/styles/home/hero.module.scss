@@ -1,11 +1,10 @@
-/*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
-#hero {
-  background-color: #f2f6fc!important;
+$primary: #0d6efd;
+
+.hero {
+  background-color: #f2f6fc !important;
 }
 
-#hero h1 {
+.header {
   margin: 0;
   font-size: 40px;
   font-weight: 700;
@@ -13,13 +12,13 @@
   color: #3e4450;
 }
 
-#hero h2 {
+.subHeader {
   color: #858ea1;
   margin: 10px 0 30px 0;
   font-size: 24px;
 }
 
-#hero .btn-get-started {
+.getStarted {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 1px;
@@ -31,19 +30,20 @@
   background: $primary;
   box-shadow: 0 8px 28px rgba(7, 101, 224, 0.45);
 }
-#hero .hero-icon{
+.icon {
   font-size: 23px;
   font-weight: 700;
   padding: 0 5px;
 }
 
-#hero .btn-get-started:hover,#hero .subscribe:hover {
+.getStarted:hover,
+.subscribe:hover {
+  color:#fff;
   background: #003dad;
   box-shadow: 0 8px 28px rgba(0, 89, 255, 0.45);
-
 }
 
-#hero .subscribe {
+.subscribe {
   font-size: 16px;
   display: inline-block;
   transition: 0.5s;
@@ -52,53 +52,52 @@
   align-items: center;
   justify-content: center;
   color: $primary;
-  background-color:#dae7fb!important;
+  background-color: #dae7fb !important;
   font-weight: 700;
   line-height: 0;
   margin-right: 8px;
   padding: 8px 30px 10px 30px;
 }
 
-#hero .hero-img img {
+.heroImg img {
   width: 95%;
 }
 
-
 @media (max-width: 991px) {
-  #hero h1 {
+  .header {
     text-align: center;
   }
-  #hero h2 {
+  .subHeader {
     text-align: center;
   }
-  #hero .buttons {
+  .buttons {
     justify-content: center;
   }
-  #hero .hero-img {
+  .heroImg {
     text-align: center;
   }
-  #hero .hero-img img {
+  .heroImg img {
     width: 40%;
   }
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
+  .header {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  .subHeader {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
-  #hero .hero-img img {
+  .heroImg img {
     width: 70%;
   }
 }
 
 @media (max-width: 575px) {
-  #hero .hero-img img {
+  .heroImg img {
     width: 60%;
   }
 }

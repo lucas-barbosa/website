@@ -3,6 +3,7 @@ import * as React from "react";
 // components
 import Image from "next/image";
 import Link from "next/link";
+
 const NotFound = () => {
   return (
     <React.Fragment>

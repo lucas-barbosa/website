@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../styles/projects/hero.module.css";
 
 // components
 import Image from "next/image";
@@ -7,12 +8,12 @@ const HeroSection: React.FC = () => {
   return (
     <React.Fragment>
       {/* header */}
-      <div className="projects-intro">
+      <div className={styles.intro}>
         <header className="header">
           <h1 className="display-6 text-center text-white mt-3 p-1">
             welcome to my github projects
           </h1>
-          <p className="lead sub-title text-center">
+          <p className={`lead text-center ${styles.subTitle}`}>
             showing my projects that I finished up in my development work line.
           </p>
           <div className="d-flex justify-content-center align-items-center mb-3">
@@ -41,7 +42,7 @@ const HeroSection: React.FC = () => {
               width="320"
               height="170"
               unoptimized={true}
-              className="status-img z-index-2"
+              className={styles.img}
               loader={({src}):string => src}
               src={`${process.env.language_states}`}
               alt="alguerocode github most language states, image"
@@ -50,7 +51,7 @@ const HeroSection: React.FC = () => {
               width="380"
               height="170"
               unoptimized={true}
-              className="status-img ms-2"
+              className={`status-img ms-2 ${styles.img}`}
               loader={({src}):string => src}
               src={`${process.env.github_states}`}
               alt="alguerocode github states, image"
@@ -59,7 +60,7 @@ const HeroSection: React.FC = () => {
               width="380"
               height="170"
               unoptimized={true}
-              className="ms-2 status-img"
+              className={`ms-2 ${styles.img}`}
               loader={({src}):string => src}
               src={`${process.env.streak_states}`}
               alt="alguerocode github streak states, image"

@@ -1,36 +1,45 @@
-import React, { useState } from "react";
-import type { ProjectsProps } from "../../pages/projects";
+import React, { useState, useEffect, FormEvent } from "react";
+import type { ProjectsProps as DashboardProps } from "../../pages/projects";
 import { API } from "../../api/axios";
+import styles from "../../styles/projects/dashboard.module.css";
 
+type Projects = {
+  _id: string;
+  title: string;
+  repoName: string;
+  categories: string[];
+}[];
 
-const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
-  const [curProjects, setCurProjects] = useState(projects);
-  const [showSpinner, setSpinner] = useState(false);
+const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
+  const [curProjects, setCurProjects] = useState<Projects | []>([]);
+  const [showSpinner, setSpinner] = useState<boolean>(false);
+  const [projectFetchError, setError] = useState<boolean | string>(false);
 
-  const getProjectsByCategoryHandler = async (e: React.FormEvent) => {
+  useEffect(() => {
+    getProjectsByCategoryHandler("");
+  }, []);
+
+  const getProjectsByCategoryHandler = async (category: string) => {
     try {
-
       setSpinner(true);
       const headers = new Headers({
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
       });
-      const res = await API.get(`/projects/${e.currentTarget.id}`, { headers });
-      setSpinner(false);
+      const res = await API.get(`/projects/${category}`, { headers });
       setCurProjects(res.data);
-
-    } catch (error) {
-
       setSpinner(false);
-      setCurProjects(projects);
+    } catch (error) {
       console.log(error.message);
-
+      setCurProjects([]);
+      setSpinner(false);
+      setError(error.message);
     }
   };
 
   return (
     <React.Fragment>
-      <section id="dashboard" className="pb-3">
+      <section id="dashboard" className={`pb-3 ${styles.dashboard}`}>
         <div className="row d-flex align-items-start justify-content-center m-3">
           <div className="container-lg col-md-5 border border-primary border-1 col-ms-8 rounded pb-3">
             <h4 className="text-primary lead text-start my-2 ms-2">
@@ -40,7 +49,15 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
               className="buttons d-flex flex-wrap justify-content-start"
               role="group"
             >
-              <button id="" type="button" className="btn btn-primary m-1" onClick={getProjectsByCategoryHandler}>
+              {/* all category button (is seperate becuase we need empty id) */}
+              <button
+                id=""
+                type="button"
+                className={`btn btn-primary m-1 ${styles.button}`}
+                onClick={(e: FormEvent) =>
+                  getProjectsByCategoryHandler(e.currentTarget.id)
+                }
+              >
                 All projects
               </button>
 
@@ -50,17 +67,21 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
                   type="button"
                   className="btn btn-primary m-1"
                   key={category._id}
-                  onClick={getProjectsByCategoryHandler}
+                  onClick={(e: FormEvent) =>
+                    getProjectsByCategoryHandler(e.currentTarget.id)
+                  }
                 >
                   {category.category}
-                  <span className="badge count-span ms-2">
+                  <span className={`badge count ms-2 ${styles.count}`}>
                     {category.projectsCount}
                   </span>
                 </button>
               ))}
             </div>
           </div>
-          <div className="overflow-scroll col-md-6 border border-primary border-1 col-sm-8 rounded mt-md-0 mt-3 pb-3 my-projects">
+          <div
+            className={`overflow-scroll col-md-6 border border-primary border-1 col-sm-8 rounded mt-md-0 mt-3 pb-3 ${styles.projects}`}
+          >
             <h4 className="text-primary lead text-start my-2 ms-2">
               <i className="bi bi-clipboard-check fs-4 me-1"></i>my projects
             </h4>
@@ -68,9 +89,12 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
               className="buttons d-flex justify-content-center align-items-center flex-column"
               role="group"
             >
-              {showSpinner ? (
-                <div className="spinner-border text-primary mt-5" role="status"/>
-              ) : (
+              {showSpinner ? (             
+                <div
+                  className="spinner-border text-primary mt-5"
+                  role="status"
+                />
+              ) : !projectFetchError ? (
                 curProjects?.map((project) => (
                   <a
                     href={`https://github.com/alguerocode/${project.repoName}`}
@@ -82,9 +106,15 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
                     <img
                       className="img-fluid"
                       src={`https://gh-card.dev/repos/alguerocode/${project.repoName}.svg`}
+                      alt={`alguero github repository : ${project.repoName}`}
                     />
                   </a>
                 ))
+              ) : (
+                <div className="d-flex align-items-center justify-content-center flex-column">
+                  <i className="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+                  <p className="lead text-center text-danger">{projectFetchError}</p>
+                </div>
               )}
             </div>
           </div>
