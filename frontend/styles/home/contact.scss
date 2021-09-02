@@ -1,6 +1,8 @@
 /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+$d_orange:#FB8500;
+
 
 .contact .contact-title {
   display: flex;
@@ -23,15 +25,15 @@
 } 
 
 .contact .info {
-  border-top: 3px solid $primary;
-  border-bottom: 3px solid $primary;
+  border-top: 3px solid #0d6efd;
+  border-bottom: 3px solid #0d6efd;
   padding: 30px;
   width: 100%;
 }
 
 .contact .info i {
   font-size: 20px;
-  color: $primary;
+  color: #0d6efd;
   float: left;
   width: 44px;
   height: 44px;
@@ -78,25 +80,25 @@
 }
 .contact span {
   color:#fff;
-  background:$primary;
+  background:#0d6efd;
 }
 
 .contact .info .social-links a:hover {
-  background: $primary;
+  background: #0d6efd;
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: $primary;
+  background: #0d6efd;
   color: #fff;
 }
 
 .contact .php-email-form {
   width: 100%;
-  border-top: 3px solid $primary;
-  border-bottom: 3px solid $primary;
+  border-top: 3px solid #0d6efd;
+  border-bottom: 3px solid #0d6efd;
   padding: 30px;
   background-color: #f9f9fa;
 }
@@ -121,7 +123,7 @@
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: $primary;
+  background: #0d6efd;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -141,7 +143,7 @@
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid $primary;
+  border: 3px solid #0d6efd;
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -157,7 +159,7 @@
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: $primary;
+  border-color: #0d6efd;
 }
 
 .contact .php-email-form input {
@@ -169,7 +171,7 @@
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: $primary;
+  background: #0d6efd;
   border: 0;
   padding: 10px 24px;
   color: #fff;

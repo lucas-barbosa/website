@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import type { ProjectsProps } from "../../pages/projects";
 import { API } from "../../api/axios";
-
+import styles from "../../styles/projects/dashboard.module.css";
 
 const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
   const [curProjects, setCurProjects] = useState(projects);
@@ -30,7 +30,7 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
 
   return (
     <React.Fragment>
-      <section id="dashboard" className="pb-3">
+      <section id="dashboard" className={`pb-3 ${styles.dashboard}`}>
         <div className="row d-flex align-items-start justify-content-center m-3">
           <div className="container-lg col-md-5 border border-primary border-1 col-ms-8 rounded pb-3">
             <h4 className="text-primary lead text-start my-2 ms-2">
@@ -40,7 +40,7 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
               className="buttons d-flex flex-wrap justify-content-start"
               role="group"
             >
-              <button id="" type="button" className="btn btn-primary m-1" onClick={getProjectsByCategoryHandler}>
+              <button id="" type="button" className={`btn btn-primary m-1 ${styles.button}`} onClick={getProjectsByCategoryHandler}>
                 All projects
               </button>
 
@@ -53,14 +53,14 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
                   onClick={getProjectsByCategoryHandler}
                 >
                   {category.category}
-                  <span className="badge count-span ms-2">
+                  <span className={`badge count ms-2 ${styles.count}`}>
                     {category.projectsCount}
                   </span>
                 </button>
               ))}
             </div>
           </div>
-          <div className="overflow-scroll col-md-6 border border-primary border-1 col-sm-8 rounded mt-md-0 mt-3 pb-3 my-projects">
+          <div className={`overflow-scroll col-md-6 border border-primary border-1 col-sm-8 rounded mt-md-0 mt-3 pb-3 ${styles.projects}`}>
             <h4 className="text-primary lead text-start my-2 ms-2">
               <i className="bi bi-clipboard-check fs-4 me-1"></i>my projects
             </h4>
@@ -82,6 +82,7 @@ const Dashboard: React.FC<ProjectsProps> = ({ categories, projects }) => {
                     <img
                       className="img-fluid"
                       src={`https://gh-card.dev/repos/alguerocode/${project.repoName}.svg`}
+                      alt={`alguero github repository : ${project.repoName}`}
                     />
                   </a>
                 ))
