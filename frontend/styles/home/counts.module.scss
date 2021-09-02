@@ -5,7 +5,7 @@
   padding: 70px 0 60px;
 }
 
-.counts .count-box {
+.countBox {
   padding: 30px 30px 25px 30px;
   width: 100%;
   position: relative;
@@ -14,7 +14,7 @@
   border-radius: 10px;
 }
 
-.counts .count-box i {
+.icon {
   position: absolute;
   top: -28px;
   left: 50%;
@@ -32,14 +32,14 @@
   justify-content: center;
 }
 
-.counts .count-box span {
+.span {
   font-size: 36px;
   display: block;
   font-weight: 600;
   color: #062b5b;
 }
 
-.counts .count-box p {
+.paragraph {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
