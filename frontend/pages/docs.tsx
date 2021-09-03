@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 
 // components
 import Head from "next/head";
+import ComingSoon from "../components/docs/comingSoon";
 
 const Blogs:NextPage = () => {
   return (
@@ -10,9 +11,7 @@ const Blogs:NextPage = () => {
       <Head>
         <title>Alguero | Documents</title>
       </Head>
-      <div>
-        welcome there
-      </div>
+        <ComingSoon/>
     </React.Fragment>
   );
 };
