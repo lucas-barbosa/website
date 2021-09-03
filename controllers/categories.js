@@ -1,5 +1,5 @@
 // this file for projects categories
-const categoriesModel = require("../models/categories");
+const categoriesModel = require("../models/categoriesModel");
 
 const get_all_categories = (req, res) => {
 

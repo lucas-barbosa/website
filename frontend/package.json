@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^1.6.1",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
+    "formik": "^2.2.9",
     "moment": "^2.29.1",
     "next": "11.1.0",
     "next-redux-wrapper": "^7.0.2",
