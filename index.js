@@ -34,6 +34,7 @@ app.use("/categories", require("./routes/categories"));
 app.use("/projects", require("./routes/projects"));
 app.use("/contacts", require("./routes/contacts"));
 app.use("/subscribers", require("./routes/subscribers"));
+app.use("/products", require("./routes/products"));
 
 app.get("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");

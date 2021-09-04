@@ -3,6 +3,7 @@ import tippy from "tippy.js";
 import { useFormik } from "formik";
 import { API } from "../../api/axios";
 import * as Yup from "yup";
+import { toast } from "react-toastify";
 
 // components
 import Link from "next/link";
@@ -22,11 +23,20 @@ const Footer: React.FC = () => {
       onSubmit: async (data) => {
         try {
           setLoading(true);
+          console.log(data);
           const res = await API.put("/subscribers", data);
           console.log(res.data); // toustify
           setLoading(false);
-        } catch (err) {
-          console.log(err); // toustify
+          toast.success("successfully subscribed 👍🎉");
+        } catch (err: any) {
+          console.error(err);
+          if (err.response.status == 406) {
+            toast.info("Your Email is Already Exists 😅 ");
+          } else if (err.response.status == 407) {
+            toast.error("Invalid Email Entered ✍️");
+          } else {
+            toast.error("Internal Server Error ⚠️");
+          }
           setLoading(false);
         }
       },
@@ -62,13 +72,15 @@ const Footer: React.FC = () => {
                     onChange={handleChange}
                     type="email"
                     name="email"
-                    placeholder="Enter your Email"
-                    
                   />
                   {touched.email && errors.email ? (
                     <p className="lead text-danger">{errors.email}</p>
                   ) : null}
-                  <input type="submit" value={!loading ?"subscribe" : "loading..."} disabled={loading}/>
+                  <input
+                    type="submit"
+                    value={!loading ? "subscribe" : "loading..."}
+                    disabled={loading}
+                  />
                 </form>
               </div>
             </div>

@@ -23,8 +23,8 @@ export const getStaticProps: GetStaticProps = async (
   try {
     const res = await API.get("/categories");
     categories = res.data;
-  } catch (error) {
-    console.log(error.message);
+  } catch (error:any) {
+    console.log(error);
   }
 
   return {

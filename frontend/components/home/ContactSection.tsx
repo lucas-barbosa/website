@@ -1,8 +1,9 @@
-import React, { FormEvent, useState} from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "../../styles/home/contact.module.scss";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { API } from "../../api/axios";
+import { toast } from "react-toastify";
 
 // components
 import Image from "next/image";
@@ -25,24 +26,32 @@ const ContactSection: React.FC = () => {
         username: Yup.string()
           .min(4, "username should be at least 4 characters")
           .max(20, "username should at most than 20 characters")
+          .trim()
           .required("username is required"),
         subject: Yup.string()
           .min(8, "subject should be at least 8 characters")
           .max(50, "subject should at most than 50 characters")
+          .trim()
           .required("subject is required"),
         message: Yup.string()
           .min(20, "message should be at least 20 characters")
           .max(300, "message should be at most 300 characters")
+          .trim()
           .required("message is required"),
       }),
       onSubmit: async (data) => {
         try {
           setSending(true);
           const res = await API.put("/contacts", data);
-          console.log(res.data); // toustify
           setSending(false);
-        } catch (err) {
-          console.log(err); // toustify
+          toast.success("successfully send the contact 👍🎉");
+        } catch (err: any) {
+          console.error(err); // toustify
+          if (err.response.status == 406) {
+            toast.error("Invalid Contact Entered ✍️");
+          } else {
+            toast.error("Internal Server Error ⚠️");
+          }
           setSending(false);
         }
       },
@@ -182,9 +191,13 @@ const ContactSection: React.FC = () => {
                   ) : null}
                 </div>
                 <div className="text-center mt-4">
-                    <button type="submit" className={styles.submitButton} disabled={sending}>
-                      {!sending ? "Send message" : "sending..."}
-                    </button>
+                  <button
+                    type="submit"
+                    className={styles.submitButton}
+                    disabled={sending}
+                  >
+                    {!sending ? "Send message" : "sending..."}
+                  </button>
                 </div>
               </form>
             </div>

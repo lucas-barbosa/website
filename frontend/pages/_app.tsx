@@ -7,6 +7,8 @@ import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/perspective-subtle.css";
 import "tippy.js/themes/light.css";
 import "../styles/globals.scss";
+import "react-toastify/dist/ReactToastify.css";
+
 
 // components
 import Head from "next/head";

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, FormEvent } from "react";
 import type { ProjectsProps as DashboardProps } from "../../pages/projects";
+import axios from "axios";
 import { API } from "../../api/axios";
 import styles from "../../styles/projects/dashboard.module.css";
 
@@ -12,30 +13,34 @@ type Projects = {
 
 const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
   const [curProjects, setCurProjects] = useState<Projects | []>([]);
+  const [category, setCategory] = useState<string>("");
   const [showSpinner, setSpinner] = useState<boolean>(false);
   const [projectFetchError, setError] = useState<boolean | string>(false);
 
   useEffect(() => {
-    getProjectsByCategoryHandler("");
-  }, []);
+    setSpinner(true);
+    const source = axios.CancelToken.source();
+    const headers = new Headers({
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    });
 
-  const getProjectsByCategoryHandler = async (category: string) => {
-    try {
-      setSpinner(true);
-      const headers = new Headers({
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
+    API.get(`/projects/${category}`, {
+      headers,
+      cancelToken: source.token,
+    })
+      .then((res) => {
+        setCurProjects(res.data);
+        setSpinner(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError(err.message);
+        setSpinner(false);
       });
-      const res = await API.get(`/projects/${category}`, { headers });
-      setCurProjects(res.data);
-      setSpinner(false);
-    } catch (error:any) {
-      console.log(error.message);
-      setCurProjects([]);
-      setSpinner(false);
-      setError(error.message);
-    }
-  };
+
+    return () => source.cancel("request cancled");
+  }, [category]);
 
   return (
     <React.Fragment>
@@ -54,9 +59,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
                 id=""
                 type="button"
                 className={`btn btn-primary m-1 ${styles.button}`}
-                onClick={(e: FormEvent) =>
-                  getProjectsByCategoryHandler(e.currentTarget.id)
-                }
+                onClick={(e: FormEvent) => setCategory(e.currentTarget.id)}
               >
                 All projects
               </button>
@@ -67,9 +70,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
                   type="button"
                   className="btn btn-primary m-1"
                   key={category._id}
-                  onClick={(e: FormEvent) =>
-                    getProjectsByCategoryHandler(e.currentTarget.id)
-                  }
+                  onClick={(e: FormEvent) => setCategory(e.currentTarget.id)}
                 >
                   {category.category}
                   <span className={`badge count ms-2 ${styles.count}`}>
@@ -89,7 +90,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
               className="buttons d-flex justify-content-center align-items-center flex-column"
               role="group"
             >
-              {showSpinner ? (             
+              {showSpinner ? (
                 <div
                   className="spinner-border text-primary mt-5"
                   role="status"
@@ -113,7 +114,9 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
               ) : (
                 <div className="d-flex align-items-center justify-content-center flex-column">
                   <i className="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
-                  <p className="lead text-center text-danger">{projectFetchError}</p>
+                  <p className="lead text-center text-danger">
+                    {projectFetchError}
+                  </p>
                 </div>
               )}
             </div>
