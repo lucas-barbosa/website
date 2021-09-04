@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import tippy from "tippy.js";
 import { useFormik } from "formik";
 import { API } from "../../api/axios";
@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
+  const [loading, setLoading] = useState(false);
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
     useFormik({
       initialValues: {
@@ -20,10 +21,13 @@ const Footer: React.FC = () => {
       }),
       onSubmit: async (data) => {
         try {
+          setLoading(true);
           const res = await API.put("/subscribers", data);
           console.log(res.data); // toustify
+          setLoading(false);
         } catch (err) {
           console.log(err); // toustify
+          setLoading(false);
         }
       },
     });
@@ -51,7 +55,7 @@ const Footer: React.FC = () => {
               className="row footer-newsletter justify-content-center"
             >
               <div className="col-lg-6">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} role="form">
                   <input
                     value={values.email}
                     onBlur={handleBlur}
@@ -59,11 +63,12 @@ const Footer: React.FC = () => {
                     type="email"
                     name="email"
                     placeholder="Enter your Email"
+                    
                   />
                   {touched.email && errors.email ? (
                     <p className="lead text-danger">{errors.email}</p>
                   ) : null}
-                  <input type="submit" value="Subscribe" />
+                  <input type="submit" value={!loading ?"subscribe" : "loading..."} disabled={loading}/>
                 </form>
               </div>
             </div>

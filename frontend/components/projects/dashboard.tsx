@@ -29,7 +29,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
       const res = await API.get(`/projects/${category}`, { headers });
       setCurProjects(res.data);
       setSpinner(false);
-    } catch (error) {
+    } catch (error:any) {
       console.log(error.message);
       setCurProjects([]);
       setSpinner(false);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent, useState} from "react";
 import styles from "../../styles/home/contact.module.scss";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -8,6 +8,7 @@ import { API } from "../../api/axios";
 import Image from "next/image";
 
 const ContactSection: React.FC = () => {
+  const [sending, setSending] = useState(false);
   const { handleSubmit, handleChange, handleBlur, values, touched, errors } =
     useFormik({
       initialValues: {
@@ -36,10 +37,13 @@ const ContactSection: React.FC = () => {
       }),
       onSubmit: async (data) => {
         try {
-          const res = await API.put("/contacts",data);
+          setSending(true);
+          const res = await API.put("/contacts", data);
           console.log(res.data); // toustify
+          setSending(false);
         } catch (err) {
           console.log(err); // toustify
+          setSending(false);
         }
       },
     });
@@ -178,9 +182,9 @@ const ContactSection: React.FC = () => {
                   ) : null}
                 </div>
                 <div className="text-center mt-4">
-                  <button type="submit" className={styles.submitButton}>
-                    Send Message
-                  </button>
+                    <button type="submit" className={styles.submitButton} disabled={sending}>
+                      {!sending ? "Send message" : "sending..."}
+                    </button>
                 </div>
               </form>
             </div>
