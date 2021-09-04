@@ -1,16 +1,37 @@
-import React,{useEffect} from "react";
-import tippy,{createSingleton} from "tippy.js";
+import React, { useEffect } from "react";
+import tippy from "tippy.js";
+import { useFormik } from "formik";
+import { API } from "../../api/axios";
+import * as Yup from "yup";
 
 // components
 import Link from "next/link";
 
 const Footer: React.FC = () => {
-
-  useEffect(()=>{
-    tippy(".social-links a",{
-      theme:"light"
+  const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
+    useFormik({
+      initialValues: {
+        email: "",
+      },
+      validationSchema: Yup.object({
+        email: Yup.string()
+          .email("Email is invaled")
+          .max(100, "Email should at most 100 characters long"),
+      }),
+      onSubmit: async (data) => {
+        try {
+          const res = await API.put("/subscribers", data);
+          console.log(res.data); // toustify
+        } catch (err) {
+          console.log(err); // toustify
+        }
+      },
     });
-  },[])
+  useEffect(() => {
+    tippy(".social-links a", {
+      theme: "light",
+    });
+  }, []);
 
   return (
     <React.Fragment>
@@ -20,17 +41,28 @@ const Footer: React.FC = () => {
             <div className="row  justify-content-center">
               <div className="col-lg-6">
                 <h3>Alguero</h3>
-                <h5 className="text-muted">Subscribe to get updated when new things get released!</h5>
+                <h5 className="text-muted">
+                  Subscribe to get updated when new things get released!
+                </h5>
               </div>
             </div>
-            <div id="subscribe"className="row footer-newsletter justify-content-center">
+            <div
+              id="subscribe"
+              className="row footer-newsletter justify-content-center"
+            >
               <div className="col-lg-6">
-                <form method="post">
+                <form onSubmit={handleSubmit}>
                   <input
+                    value={values.email}
+                    onBlur={handleBlur}
+                    onChange={handleChange}
                     type="email"
                     name="email"
                     placeholder="Enter your Email"
                   />
+                  {touched.email && errors.email ? (
+                    <p className="lead text-danger">{errors.email}</p>
+                  ) : null}
                   <input type="submit" value="Subscribe" />
                 </form>
               </div>
@@ -110,7 +142,9 @@ const Footer: React.FC = () => {
           </div>
           <div className="credits">
             Designed by{" "}
-            <a href={process.env.github} target="_blank" rel="noreferrer">Alguerocode</a>
+            <a href={process.env.github} target="_blank" rel="noreferrer">
+              Alguerocode
+            </a>
           </div>
         </div>
       </footer>

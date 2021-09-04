@@ -21,7 +21,8 @@
     "react-dom": "17.0.2",
     "react-redux": "^7.2.4",
     "sass": "^1.38.0",
-    "tippy.js": "^6.3.1"
+    "tippy.js": "^6.3.1",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@types/react": "17.0.19",

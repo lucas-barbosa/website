@@ -1,10 +1,49 @@
 import React from "react";
 import styles from "../../styles/home/contact.module.scss";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { API } from "../../api/axios";
 
 // components
 import Image from "next/image";
 
 const ContactSection: React.FC = () => {
+  const { handleSubmit, handleChange, handleBlur, values, touched, errors } =
+    useFormik({
+      initialValues: {
+        email: "",
+        username: "",
+        subject: "",
+        message: "",
+      },
+      validationSchema: Yup.object({
+        email: Yup.string()
+          .email("Email is invalid")
+          .max(100, "email should be at most 100 characters")
+          .required("email is required"),
+        username: Yup.string()
+          .min(4, "username should be at least 4 characters")
+          .max(20, "username should at most than 20 characters")
+          .required("username is required"),
+        subject: Yup.string()
+          .min(8, "subject should be at least 8 characters")
+          .max(50, "subject should at most than 50 characters")
+          .required("subject is required"),
+        message: Yup.string()
+          .min(20, "message should be at least 20 characters")
+          .max(300, "message should be at most 300 characters")
+          .required("message is required"),
+      }),
+      onSubmit: async (data) => {
+        try {
+          const res = await API.put("/contacts",data);
+          console.log(res.data); // toustify
+        } catch (err) {
+          console.log(err); // toustify
+        }
+      },
+    });
+
   return (
     <React.Fragment>
       <section id="contact" className="contact bg-light">
@@ -14,7 +53,9 @@ const ContactSection: React.FC = () => {
               <i className="bi bi-chat-right-text fs-1 p-2 text-primary"></i>
               <h2 className={styles.titleHeader}>Contact Us</h2>
             </div>
-            <p className={styles.subTitle}>Contact Us by fill this message box</p>
+            <p className={styles.subTitle}>
+              Contact Us by fill this message box
+            </p>
           </div>
 
           <div className="row">
@@ -49,8 +90,7 @@ const ContactSection: React.FC = () => {
 
             <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
               <form
-                action="forms/contact.php"
-                method="post"
+                onSubmit={handleSubmit}
                 role="form"
                 className={styles.emailForm}
               >
@@ -64,13 +104,18 @@ const ContactSection: React.FC = () => {
                         id="addon-wrapping"
                       />
                       <input
+                        value={values.username}
+                        onBlur={handleBlur}
+                        onChange={handleChange}
                         type="text"
                         id="username"
                         className="form-control"
                         aria-label="Username"
                         aria-describedby="addon-wrapping"
-                        required
                       />
+                      {touched.username && errors.username ? (
+                        <p className="lead text-danger">{errors.username}</p>
+                      ) : null}
                     </div>
                   </div>
                   <div className="form-group col-md-6 mt-3 mt-md-0">
@@ -81,13 +126,18 @@ const ContactSection: React.FC = () => {
                         id="addon-wrapping"
                       />
                       <input
-                        type="text"
+                        value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        type="email"
                         id="email"
                         className="form-control"
                         aria-label="Email"
                         aria-describedby="addon-wrapping"
-                        required
                       />
+                      {touched.email && errors.email ? (
+                        <p className="lead text-danger">{errors.email}</p>
+                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -99,26 +149,38 @@ const ContactSection: React.FC = () => {
                       id="addon-wrapping"
                     />
                     <input
+                      value={values.subject}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                       type="text"
                       id="subject"
                       className="form-control"
                       aria-label="Subject"
                       aria-describedby="addon-wrapping"
-                      required
                     />
+                    {touched.subject && errors.subject ? (
+                      <p className="lead text-danger">{errors.subject}</p>
+                    ) : null}
                   </div>
                 </div>
                 <div className={`mt-3 ${styles.formGroup}`}>
                   <label htmlFor="name">Message</label>
                   <textarea
+                    value={values.message}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                     className="form-control"
                     name="message"
                     rows={10}
-                    required
                   ></textarea>
+                  {touched.message && errors.message ? (
+                    <p className="lead text-danger">{errors.message}</p>
+                  ) : null}
                 </div>
                 <div className="text-center mt-4">
-                  <button type="submit" className={styles.submitButton}>Send Message</button>
+                  <button type="submit" className={styles.submitButton}>
+                    Send Message
+                  </button>
                 </div>
               </form>
             </div>

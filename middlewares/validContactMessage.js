@@ -12,21 +12,21 @@ const contactValidator = (req, res, next) => {
     email: "",
   };
 
-  if (!isEmail(email)) {
-    errors.email = "Email is invalid";
+  if (!isEmail(email) &&  email?.trim().length  > 100) {
+    errors.email = "invalid email";
     errors.exists = true;
   }
-  if (username?.trim().length < 1) {
-    errors.username = "Username is required";
+  if (username?.trim().length < 4 && username?.trim().length > 20) {
+    errors.username = "invalid username";
     errors.exists = true;
   }
-  if (subject?.trim().length < 8) {
-    errors.subject = "Subject should be at least 8 characters long";
+  if (subject?.trim().length < 8 && subject?.trim().length > 50) {
+    errors.subject = "invalid subject";
 
     errors.exists = true;
   }
-  if (message?.trim().length < 20) {
-    errors.message = "Message should be at least 8 characters long";
+  if (message?.trim().length < 20 && message?.trim().length > 300) {
+    errors.message = "invalid message";
     errors.exists = true;
   }
   if (errors.exists) {
