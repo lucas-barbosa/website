@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
                 >
                   <div>Get Started</div>
                   <i
-                    className={`bi bi-arrow-right-short fs-3 ${styles.icon}`}
+                    className={`bi bi-arrow-right-short fs-2 ${styles.icon}`}
                   ></i>
                 </a>
                 <a href="#subscribe" className={`${styles.subscribe}`}>

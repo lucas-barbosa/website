@@ -7,7 +7,7 @@ import BackToTop from "../components/layout/BackToTop";
 import FeatureSection from "../components/home/FeatureSection";
 import HeroSection from "../components/home/HeroSection";
 import ContactSection from "../components/home/ContactSection";
-import CountsSection from "../components/home/CountsSection";
+import AboutSection from "../components/home/AboutSection";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +16,7 @@ const Home: NextPage = () => {
         <title>Alguero | Home</title>
       </Head>
       <HeroSection />
+      <AboutSection />
       <FeatureSection />
       <ContactSection />
       <BackToTop />

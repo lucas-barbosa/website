@@ -6,6 +6,7 @@ $white_blue:#CBFCF9;
 
 .hero {
   background-color: $milk !important;
+  padding-bottom:50px;
 }
 
 .header {
@@ -83,6 +84,7 @@ $white_blue:#CBFCF9;
   }
   .heroImg {
     text-align: center;
+    justify-content: center!important;
   }
   .heroImg img {
     width: 90%;
