@@ -2,6 +2,9 @@ import React,{useEffect} from "react";
 import tippy from "tippy.js";
 import styles from "../../styles/home/hero.module.scss";
 
+// components 
+import Image from "next/image";
+
 const HeroSection: React.FC = () => {
 
   useEffect(() =>{
@@ -33,8 +36,10 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             <div className={`col-lg-6 order-1 order-lg-2 ${styles.heroImg}`}>
-              <img
-                src="/images/hero.svg"
+              <Image
+                width="400"
+                height="400"
+                src="/images/hero.png"
                 className="img-fluid home-image"
                 alt="alhashmicode hero section, development vector image"
               />
