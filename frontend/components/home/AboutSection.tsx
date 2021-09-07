@@ -27,12 +27,12 @@ const FeatureSection: React.FC = () => {
     <React.Fragment>
       <section
         id="features"
-        className={`${styles.features} container-lx  p-3 d-flex justify-content-center row align-items-center`}
+        className={`${styles.about} container-lx d-flex justify-content-center row align-items-center`}
       >
         {/* digital service card */}
         <div className={`${styles.card} card m-3`}>
           <Image
-            src="/images/digital-services.jpg"
+            src="/images/api.png"
             width="262"
             height="175"
             alt="alhashmicode image projects developer card"
@@ -54,7 +54,7 @@ const FeatureSection: React.FC = () => {
         {/* projects card */}
         <div className={`${styles.card} card m-3`}>
           <Image
-            src="/images/projects.jpg"
+            src="/images/web.png"
             width="262"
             height="175"
             alt="alhashmicode image digital servies developer"
@@ -76,7 +76,7 @@ const FeatureSection: React.FC = () => {
         {/* blogs card */}
         <div className={`${styles.card} card m-3`}>
           <Image
-            src="/images/blogs.jpg"
+            src="/images/npm.png"
             width="262"
             height="175"
             alt="alhashicode image blogs developer"

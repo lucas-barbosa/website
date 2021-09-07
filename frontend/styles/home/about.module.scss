@@ -1,17 +1,18 @@
 $primary:#0d6efd;
 $yel:#FFD300;
 
-.features {
-    overflow: hidden;
+.about {
     background-color: $yel;
 }
 
 .card {
-  width: 18rem;
-  border:0;
-  overflow: hidden;
+  transition: 0.3s;
+  width: 21rem;
   height: 380px;
-  box-shadow:0 8px 28px #c5cad3;
+  border-radius: 0;
+  border: 2px solid #000;
+  transform:translateY(-30%);
+  z-index:23;
 }
 
 .cardTitle {
@@ -49,12 +50,8 @@ $yel:#FFD300;
   font-size: 24px;
 }
 .card:hover {
-  border-width: 0 0 7px 0;
-  color:#fff;
-  box-shadow:0 8px 28px rgb(7 101 224 / 45%);
-  border-color: $primary;
-  border-style: solid;
-  transition: .4s;
+  box-shadow: -9px 9px 0 #000;
+  transform:translate(5px, -33%);
 }
 .card a:hover {
   color:#fff;
@@ -64,4 +61,10 @@ $yel:#FFD300;
 .cardBody {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+}
+
+@media (max-width: 991px) {
+ .card {
+   transform: translateY(0);
+ }
 }
