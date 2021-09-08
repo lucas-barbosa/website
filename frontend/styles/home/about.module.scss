@@ -1,8 +1,8 @@
-$primary:#0d6efd;
-$yel:#FFD300;
+$primary: #0d6efd;
+$yel: #ffd300;
 
 .about {
-    background-color: $yel;
+  background-color: $yel;
 }
 
 .card {
@@ -11,60 +11,38 @@ $yel:#FFD300;
   height: 380px;
   border-radius: 0;
   border: 2px solid #000;
-  transform:translateY(-30%);
-  z-index:23;
+  transform: translateY(-30%);
+  z-index: 23;
 }
 
-.cardTitle {
-  margin-bottom: .5rem;
-  color: black;
+.card h5 {
+  color: #ffff;
+  background-color:#000;
+  text-align: center;
+  width:60px;
+  padding: 4px 0px 4px 0px;
+  margin-top: 10px;
+
 }
-.link{
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: flex;
-  padding: 8px 10px 8px 10px;
-  border-radius: 4px;
-  transition: 0.5s;
-  color: #fff;
-  background: $primary;
-  text-align:center;
-  max-width: 140px;
-}
-.link i {
-  font-size: 17px;
-  font-weight: 700;
-  padding: 0 5px;
+.card h4 {
+
 }
 
-.header h1 {
-  font-size:38px;
-  font-weight: 700;
-  color:$primary;
-  display: inline;
+.card p {
+
 }
-.header p {
-  color: #858ea1;
-  margin: 10px 0 30px 0;
-  font-size: 24px;
-}
+
 .card:hover {
   box-shadow: -9px 9px 0 #000;
-  transform:translate(5px, -33%);
-}
-.card a:hover {
-  color:#fff;
-  background-color:#0952c0;
-}
-
-.cardBody {
-  flex: 1 1 auto;
-  padding: 1rem 1rem;
+  transform: translate(5px, -33%);
 }
 
 @media (max-width: 991px) {
- .card {
-   transform: translateY(0);
- }
+  .card {
+    transform: translateY(0);
+  }
+  .card:hover {
+    box-shadow: -9px 9px 0 #000;
+    transform: translate(6px, -6px);
+  }
 }
