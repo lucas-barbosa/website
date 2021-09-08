@@ -10,15 +10,15 @@ import CountsSection from "./CountsSection";
 const FeatureSection: React.FC = () => {
   useEffect(() => {
     // tooltip shows when hover the card;
-    tippy(`.${styles.link}`, {
+    tippy(`.${styles.card}`, {
       content:
-        "<h6 class='text-muted'>👆👨🏻‍💻 Click here to see more about this feature</h6>",
+        "<h6 class='text-muted'>👆👨🏻‍💻 Click here to see more about this</h6>",
       animation: "perspective-subtle",
-      placement: "bottom-start",
+      placement: "top",
       theme: "light",
-      maxWidth: 180,
+      maxWidth: 200,
       allowHTML: true,
-      delay: [100, 0],
+      delay: [400, 0],
       hideOnClick: true,
     });
   }, []);
@@ -31,39 +31,50 @@ const FeatureSection: React.FC = () => {
       >
         {/* digital service card */}
         <Link href="/">
-          <a className={`${styles.card} card m-3 d-flex flex-column justify-content-between`} >
-            <h5>API</h5>
+          <a
+            className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
+          >
+            <h6 className="align-self-start">API</h6>
             <h4>backend API service for fetching data</h4>
             <Image
               src="/images/api.png"
-              width="262"
-              height="175"
-              alt="alguerocode backend api image"
+              width="200"
+              height="200"
+              alt="alguerocode backend api image "
             />
-            <p>backend API</p>
+            <p className="align-self-end mt-3">backend API</p>
           </a>
         </Link>
         {/* projects card */}
         <Link href="/">
-          <a className={`${styles.card} card m-3 d-flex flex-column justify-content-between`}>
+          <a
+            className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
+          >
+            <h6 className="align-self-start">WEB</h6>
+            <h4>expolore tools to push your projects build</h4>
             <Image
               src="/images/web.png"
-              width="262"
-              height="175"
+              width="200"
+              height="200"
               alt="alguerocde website tools image"
             />
+            <p className="align-self-end mt-3">explore tools</p>
           </a>
         </Link>
         {/* blogs card */}
         <Link href="/">
-          <a className={`${styles.card} card m-3 d-flex flex-column justify-content-between`}>
-    
+          <a
+            className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
+          >
+            <h6 className="align-self-start">NPM</h6>
+            <h4 className="">volder npm package for object validator and middleware</h4>
             <Image
               src="/images/npm.png"
-              width="262"
-              height="175"
+              width="200"
+              height="200"
               alt="alguerocde volder npm package image"
             />
+            <p className="align-self-end mt-3">npm package</p>
           </a>
         </Link>
         {/*Count Component Section */}

@@ -14,7 +14,7 @@
   color: rgb(210, 234, 255) !important;
 }
 .img {
-  z-index: 2;
+  z-index: 20;
 }
 @media (max-width: 1100px) {
   .intro {
