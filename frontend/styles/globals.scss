@@ -22,6 +22,8 @@ $bg-light:#c8ced3;
 * ,*::before, *::after {
   font-family: 'Fira Code', monospace; 
   box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
 a {

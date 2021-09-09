@@ -56,3 +56,9 @@
   padding: 0;
   margin: 0;
 }
+@media (max-width: 1200px) {
+  .counts i {
+     transform: translate(100px,-58px);
+  }
+}
+

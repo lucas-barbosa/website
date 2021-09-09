@@ -26,7 +26,7 @@ const FeatureSection: React.FC = () => {
   return (
     <React.Fragment>
       <section
-        id="features"
+        id="about"
         className={`${styles.about} container-lx d-flex justify-content-center row align-items-center`}
       >
         {/* digital service card */}
@@ -78,7 +78,7 @@ const FeatureSection: React.FC = () => {
           </a>
         </Link>
         {/*Count Component Section */}
-        <h2 className="ms-5 mt-md-3 mt-lg-0 mb-4 ps-5 text-sm-center text-md-start">our development work</h2>
+        <h2 className="ms-5 mt-md-3 mt-lg-0 mb-4 ps-5 text-sm-center text-md-start text-lx-center">our development work</h2>
         <CountsSection />
       </section>
     </React.Fragment>
