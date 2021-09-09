@@ -10,24 +10,24 @@ const FeaturesSection: React.FC = () => {
     <section id="features" className={styles.features}>
       <div className="d-flex align-items-center justify-content-center">
         <i className="bi bi-bookmark-star fs-1 me-2 mb-2 text-white"></i>
-        <h2 className="text-center">Check our Features</h2>
+        <h1 className="text-center">Check our Features</h1>
       </div>
       <div className="row">
-          <div className="col-6">
-            <p className='text-white'>digital service</p>
-            <h5 className='text-white'>get you dream projects done with my digital services, superior products</h5>
-            <h5 className='text-white'>figure out the service products you want. and contact me in contacts section or social media links above</h5>
+          <div className="col-md-6 col-sm-10 d-flex flex-column justify-content-start ps-5 pt-5">
+            <p className='text-white lead'>digital service</p>
+            <h3 className='text-white pt-2'>get you dream projects done with my digital services, superior products.</h3>
+            <h3 className='text-white pt-4'>figure out the service products you want. and contact me in contacts section or social media links above.</h3>
             <div className="d-flex flex-row">
               <Link href="/services">
-              <a className="btn btn-primary">test</a>
+              <a className="get-started">Get started <i className="bi bi-arrow-right-short"></i></a>
               </Link>
               <Link href="/contacts">
-              <a className="btn btn-primary">test</a>
+              <a className="contact">contact us</a>
               </Link>
             </div>
           </div>
-          <div className="col-6 align-self-end">
-            <Image width="450" height="450" src="/images/digital-service.png"/>
+          <div className="col-md-6 d-none d-md-block col-sm-10 d-flex align-self-end justify-self-end ps-5">
+            <Image width="500" height="500" src="/images/digital-service.png"/>
           </div>
       </div>
     </section>

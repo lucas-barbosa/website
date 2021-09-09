@@ -5,8 +5,20 @@ $yel:#FCEC5A;
 .features {
     padding-top: 20px;
     background-color:$dark;
+    padding-bottom:30px;
 }
 
-.features h2 {
+.features h1 {
     color: #ffff;
+}
+
+.features a:first-child {
+    background-color:$gold;
+    color:#000;
+    font-size:25px;
+
+}
+
+.features a:second-child {
+    color:$yel;
 }
