@@ -2,7 +2,7 @@ import React, { useState, useEffect, FormEvent } from "react";
 import type { ProjectsProps as DashboardProps } from "../../pages/projects";
 import axios from "axios";
 import { API } from "../../api/axios";
-import styles from "../../styles/projects/dashboard.module.css";
+import styles from "../../styles/projects/dashboard.module.scss";
 
 type Projects = {
   _id: string;

@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import tippy from "tippy.js";
 
 const BackToTop: React.FC = () => {
   useEffect(() => {
@@ -13,6 +14,19 @@ const BackToTop: React.FC = () => {
     };
     window.addEventListener("load", toggleBacktotop);
     document.addEventListener("scroll", toggleBacktotop);
+
+    // tooltip to backtotop button
+
+    tippy(".back-to-top", {
+      content: "<h6 class='text-muted'>Go Up⬆️</h6>",
+      animation: "perspective-subtle",
+      theme: "light",
+      maxWidth:195,
+      allowHTML:true,
+      delay:[400, 0],
+      hideOnClick:true,
+    });
+
   }, []);
   return (
     <React.Fragment>

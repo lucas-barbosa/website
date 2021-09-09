@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/projects/hero.module.css";
+import styles from "../../styles/projects/hero.module.scss";
 
 // components
 import Image from "next/image";
