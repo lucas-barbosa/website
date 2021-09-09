@@ -3,9 +3,7 @@ import React from "react";
 
 // components
 import Head from "next/head";
-import BackToTop from "../components/layout/BackToTop";
 import HeroSection from "../components/home/HeroSection";
-import ContactSection from "../components/home/ContactSection";
 import AboutSection from "../components/home/AboutSection";
 
 const Home: NextPage = () => {
@@ -16,8 +14,6 @@ const Home: NextPage = () => {
       </Head>
       <HeroSection />
       <AboutSection />
-      <ContactSection />
-      <BackToTop />
     </React.Fragment>
   );
 };
