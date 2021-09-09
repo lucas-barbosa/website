@@ -1,0 +1,69 @@
+$glue: #f5fcff;
+
+.projects {
+  background-color: $glue;
+  padding-bottom: 20px;
+}
+.viewPage {
+  background-color: #ffff;
+  color: #ffff;
+  border: 2px solid #000;
+  transition: all 0.2s ease;
+}
+.viewPage p {
+  color: #000;
+  font-size: 21px;
+  margin-left: 7px;
+}
+.viewPage:hover {
+  box-shadow: -8px 8px #000;
+  transform: translate(5px, -5px);
+}
+
+.github {
+  border: 2px solid #000;
+  background-color: #ffff;
+  margin: 40px 45px 0 12px;
+  transition: all 0.2s ease;
+}
+
+.github p {
+  color: #000;
+}
+
+.github:hover {
+  box-shadow: -8px 8px #000;
+  transform: translate(5px, -5px);
+}
+
+.box {
+  padding: 30px 10px 10px 30px;
+  // width: 100%;
+  position: relative;
+  background: #fff;
+  border: 2px solid #000;
+  transition: all 0.2s ease;
+}
+
+.box:hover {
+  box-shadow: -9px 9px 0 #000;
+  transform: translate(6px, -6px);
+}
+
+.box h6 {
+  color: #ffff;
+  background-color: #000;
+  text-align: center;
+  width: 70px;
+  padding: 4px;
+  transform: translate(-20px, -20px);
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.box h4 {
+  font-size: 1.2rem;
+  transform: translate(-20px, -20px);
+  padding: 0;
+  margin: 0;
+}

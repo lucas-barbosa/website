@@ -12,13 +12,41 @@ $yel:#FCEC5A;
     color: #ffff;
 }
 
-.features a:first-child {
+// .Icon {
+//     color: #fffff;
+//     transform: translate(100px,100px);
+// }
+
+.getStarted {
     background-color:$gold;
+    padding:0 5px;
+    border-radius: 5px;
+    height:55px;
+    box-shadow:  -6px 6px #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.getStarted:hover {
+    box-shadow:  -10px 10px #fff;
+}
+
+.getStarted p{
     color:#000;
-    font-size:25px;
-
+    font-size:22px;
+    line-height:40px;
 }
-
-.features a:second-child {
+.contact {
     color:$yel;
+    font-size:20px;
 }
+.contact:hover {
+    color:$gold;
+}
+@media (max-width: 850px) {
+    .getStarted p{
+        font-size:18px;
+    }
+    .contact {
+        font-size:16px;
+    }
+  }

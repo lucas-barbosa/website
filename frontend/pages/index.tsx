@@ -6,6 +6,7 @@ import Head from "next/head";
 import HeroSection from "../components/home/HeroSection";
 import AboutSection from "../components/home/AboutSection";
 import FeaturesSection from "../components/home/FeaturesSection";
+import ProjectsSection from "../components/home/ProjectsSection";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <HeroSection />
       <AboutSection />
       <FeaturesSection/>
+      <ProjectsSection/>
     </React.Fragment>
   );
 };
