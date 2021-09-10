@@ -1,8 +1,14 @@
 $glue: #f5fcff;
+$goldy:#FFD300;
+
 
 .projects {
   background-color: $glue;
   padding-bottom: 20px;
+}
+.title{
+  background: linear-gradient(to top, $goldy 50%, transparent 50%);
+  width: 100px;
 }
 .viewPage {
   background-color: #ffff;
@@ -38,7 +44,6 @@ $glue: #f5fcff;
 
 .box {
   padding: 30px 10px 10px 30px;
-  // width: 100%;
   position: relative;
   background: #fff;
   border: 2px solid #000;
@@ -53,11 +58,10 @@ $glue: #f5fcff;
 .box h6 {
   color: #ffff;
   background-color: #000;
-  text-align: center;
+  text-align: center!important;
   width: 70px;
   padding: 4px;
   transform: translate(-20px, -20px);
-  letter-spacing: 1px;
   font-size: 1rem;
 }
 

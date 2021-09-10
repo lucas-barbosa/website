@@ -10,7 +10,7 @@ const ProjectsSection: React.FC = () => {
     <section id="projects" className={styles.projects}>
       <div className="row">
         <div className="col-md-6 col-sm-10 d-flex flex-column justify-content-start ps-5 pt-5">
-          <p className="lead">Projects</p>
+          <p className={`${styles.title} lead`}>Projects</p>
           <h3 className="pt-2">this page is about showing my</h3>
           <ul>
             <li className="text-muted fs-5 mt-3">
@@ -51,13 +51,12 @@ const ProjectsSection: React.FC = () => {
             <div className={`${styles.box} col-5 ms-4`}>
               <h6>SKILLS</h6>
               <h4>
-                Hello I am full-stack web develper, specific in javascript
-                language
+                Hello I am full stack web develper, specific in javascript language
               </h4>
             </div>
             <div className={`${styles.box} col-5 ms-4`}>
               <h6>SKILLS</h6>
-              <h4>my favorite web development tools is MERN stack</h4>
+              <h4>my favorite web development stack is MERN: (mongoDB, expressJS, reactJS, nodeJS)</h4>
             </div>
           </div>
         </div>

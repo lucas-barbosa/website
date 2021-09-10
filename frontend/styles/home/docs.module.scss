@@ -1,0 +1,42 @@
+$milk:#FFF0E5;
+$goldy:#FFD300;
+$blue:#3A10E5;
+$clue:#242729;
+
+.documents {
+    border-top: 2px solid #000;
+    background-color: $milk;
+    padding-bottom: 20px;
+}
+
+.documents h5 {
+    font-size:1.5rem;
+    width:500px;
+    line-height: 39px;
+    opacity: .8;
+}
+
+.documents p {
+    background: linear-gradient(to top, $goldy 50%, transparent 50%);
+    width: 110px;
+}
+
+.viewPage {
+    background-color:$blue;
+    color:#fff!important;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.viewPage:hover {
+    background-color: #2c08bb;
+}
+
+.subscribe {
+ color: $clue!important;
+ font-size: 20px;
+ margin-left: 15px;
+}
