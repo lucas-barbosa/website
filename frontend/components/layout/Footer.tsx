@@ -28,10 +28,13 @@ const Footer: React.FC = () => {
           console.log(res.data); // toustify
           setLoading(false);
           toast.success("successfully subscribed 👍🎉");
+          values.email = "";
+
         } catch (err: any) {
           console.error(err);
           if (err.response.status == 406) {
             toast.info("Your Email is Already Exists 😅 ");
+            values.email = "";
           } else if (err.response.status == 407) {
             toast.error("Invalid Email Entered ✍️");
           } else {
@@ -54,7 +57,6 @@ const Footer: React.FC = () => {
           <div className="container">
             <div className="row  justify-content-center">
               <div className="col-lg-6">
-                <h3>Alguero</h3>
                 <h5 className="text-muted">
                   Subscribe to get updated when new things get released!
                 </h5>
@@ -68,20 +70,21 @@ const Footer: React.FC = () => {
                 <form onSubmit={handleSubmit} role="form">
                   <input
                     value={values.email}
+                    placeholder="Enter your Email"
                     onBlur={handleBlur}
                     onChange={handleChange}
                     type="email"
                     name="email"
                   />
-                  {touched.email && errors.email ? (
-                    <p className="lead text-danger">{errors.email}</p>
-                  ) : null}
                   <input
                     type="submit"
                     value={!loading ? "subscribe" : "loading..."}
                     disabled={loading}
                   />
                 </form>
+                {touched.email && errors.email ? (
+                    <p className="subscribe-error">{errors.email}</p>
+                  ) : null}
               </div>
             </div>
 
@@ -129,22 +132,27 @@ const Footer: React.FC = () => {
           <ul className="d-flex align-items-end justify-content-center">
             <li>
               <Link href="/">
-                <a className="text-muted me-3">Home</a>
+                <a className="text-muted me-5 fs-5">Home</a>
               </Link>
             </li>
             <li>
               <Link href="/services">
-                <a className="text-muted me-3">Digtal Services</a>
+                <a className="text-muted me-5">Digtal Services</a>
               </Link>
             </li>
             <li>
               <Link href="/projects">
-                <a className="text-muted me-3">Projects</a>
+                <a className="text-muted me-5">Projects</a>
               </Link>
             </li>
             <li>
               <Link href="/docs">
-                <a className="text-muted me-3">Documents</a>
+                <a className="text-muted me-5">Documents</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contacts">
+                <a className="text-muted me-5">Contacts</a>
               </Link>
             </li>
           </ul>
@@ -153,7 +161,7 @@ const Footer: React.FC = () => {
           <div className="copyright">
             &copy; Copyright{" "}
             <strong>
-              <span>Alguero</span>
+              <span>Alguerocode</span>
             </strong>
             . All Rights Reserved
           </div>
