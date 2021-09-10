@@ -10,7 +10,7 @@ const DigitalService:NextPage = () =>{
     return (
         <React.Fragment>
             <Head>
-                <title>Alguero | Digital Services</title>
+                <title>Alguerocode | Digital Services</title>
             </Head>
             <div className="digital-services">
                 welcome there

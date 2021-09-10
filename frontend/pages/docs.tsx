@@ -9,7 +9,7 @@ const Blogs:NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alguero | Documents</title>
+        <title>Alguerocode | Documents</title>
       </Head>
         <ComingSoon/>
     </React.Fragment>

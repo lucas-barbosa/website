@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alguero | Home</title>
+        <title>Alguerocode | Home</title>
       </Head>
       <HeroSection />
       <AboutSection />

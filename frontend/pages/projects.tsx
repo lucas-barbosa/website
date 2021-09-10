@@ -38,7 +38,7 @@ const Projects: NextPage<ProjectsProps> = ({ categories }) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Alguero | Projects</title>
+        <title>Alguerocode | Projects</title>
       </Head>
       <HeroSection />
       <Dashboard categories={categories} />

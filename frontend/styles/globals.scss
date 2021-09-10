@@ -19,6 +19,10 @@ $bg-light:#c8ced3;
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html,body {
+  overflow-x: hidden;
+}
+
 * ,*::before, *::after {
   font-family: 'Fira Code', monospace; 
   box-sizing: border-box;
