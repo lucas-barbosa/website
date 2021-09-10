@@ -1,5 +1,5 @@
-import React, { FormEvent, useState } from "react";
-import styles from "../../styles/home/contact.module.scss";
+import React, { useState } from "react";
+import styles from "../../styles/contacts/contacts.module.scss";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { API } from "../../api/axios";
@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 // components
 import Image from "next/image";
 
-const ContactSection: React.FC = () => {
+const ContacsSection: React.FC = () => {
   const [sending, setSending] = useState(false);
   const { handleSubmit, handleChange, handleBlur, values, touched, errors } =
     useFormik({
@@ -59,11 +59,11 @@ const ContactSection: React.FC = () => {
 
   return (
     <React.Fragment>
-      <section id="contact" className="contact bg-light">
+      <section id="contact" className={`${styles.contacts} bg-light pt-4 pb-5`}>
         <div className="container pt-5">
           <div className="section-title">
             <div className={styles.title}>
-              <i className="bi bi-chat-right-text fs-1 p-2 text-primary"></i>
+              <i className="bi bi-chat-right-text fs-1 p-2 text-black"></i>
               <h2 className={styles.titleHeader}>Contact Us</h2>
             </div>
             <p className={styles.subTitle}>
@@ -71,8 +71,8 @@ const ContactSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="row">
-            <div className="col-lg-5 d-flex align-items-stretch">
+          <div className="row justify-content-center">
+            <div className={`${styles.infoTable} col-lg-5 d-flex `}>
               <div className={styles.info}>
                 <div className={styles.address}>
                   <i className={`bi bi-geo-alt ${styles.infoIcon}`}></i>
@@ -101,7 +101,7 @@ const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <div className={`${styles.formTable} col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch`}>
               <form
                 onSubmit={handleSubmit}
                 role="form"
@@ -127,7 +127,7 @@ const ContactSection: React.FC = () => {
                         aria-describedby="addon-wrapping"
                       />
                       {touched.username && errors.username ? (
-                        <p className="lead text-danger">{errors.username}</p>
+                        <p className={`${styles.errors} lead text-danger`}>{errors.username}</p>
                       ) : null}
                     </div>
                   </div>
@@ -149,12 +149,12 @@ const ContactSection: React.FC = () => {
                         aria-describedby="addon-wrapping"
                       />
                       {touched.email && errors.email ? (
-                        <p className="lead text-danger">{errors.email}</p>
+                        <p className={`${styles.errors} lead text-danger`}>{errors.email}</p>
                       ) : null}
                     </div>
                   </div>
                 </div>
-                <div className={`mt-3 ${styles.formGroup}`}>
+                <div className={`mt-5 ${styles.formGroup}`}>
                   <label htmlFor="subject">Subject</label>
                   <div className="input-group flex-nowrap">
                     <span
@@ -172,11 +172,11 @@ const ContactSection: React.FC = () => {
                       aria-describedby="addon-wrapping"
                     />
                     {touched.subject && errors.subject ? (
-                      <p className="lead text-danger">{errors.subject}</p>
+                      <p className={`${styles.errors} lead text-danger`}>{errors.subject}</p>
                     ) : null}
                   </div>
                 </div>
-                <div className={`mt-3 ${styles.formGroup}`}>
+                <div className={`mt-5 ${styles.formGroup}`}>
                   <label htmlFor="name">Message</label>
                   <textarea
                     value={values.message}
@@ -187,7 +187,7 @@ const ContactSection: React.FC = () => {
                     rows={10}
                   ></textarea>
                   {touched.message && errors.message ? (
-                    <p className="lead text-danger">{errors.message}</p>
+                    <p className={`${styles.message} lead text-danger`}>{errors.message}</p>
                   ) : null}
                 </div>
                 <div className="text-center mt-4">
@@ -208,4 +208,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+export default ContacsSection;

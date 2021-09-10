@@ -165,13 +165,12 @@ const NavBar: React.FC = () => {
                 </ul>
               </li>
               <li>
-                <Link href="/#contact">
+                <Link href="/contacts">
                   <a
                     onClick={linksClickHandler}
                     className="nav-link link scrollto"
-                    href="#contact"
                   >
-                    Contact
+                    Contacts
                   </a>
                 </Link>
               </li>
