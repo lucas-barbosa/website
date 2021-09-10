@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         }
       },
     });
-  useEffect(() => {
+  useEffect(() => { 
     tippy(".social-links a", {
       theme: "light",
     });
