@@ -60,6 +60,18 @@ npm run test
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alguerocode/alguero.tk/issues). You can also take a look at the [contributing guide](ssh://git@github.com/alhashmicode/website/blob/master/CONTRIBUTING.md).
 
+### contribute guid
+contribute in any aspect of website or server and I will appreciate
+how
+
+### server
+- to install all the dependencies of root projects `npm install`
+- to run the server `npm run start`
+#### frontend
+- go to the frontend folder `cd frontend`
+- to install all the dependencies `npm install`
+- run the dev server `npm run dev`
+#### ❤️❤️⭐️ have fun for contributing ⭐️❤️❤️
 ## Show your support
 
 Give a ⭐️ if this project helped you!
