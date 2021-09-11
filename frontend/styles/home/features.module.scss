@@ -12,11 +12,6 @@ $yel:#FCEC5A;
     color: #ffff;
 }
 
-// .Icon {
-//     color: #fffff;
-//     transform: translate(100px,100px);
-// }
-
 .getStarted {
     background-color:$gold;
     padding:0 5px;
@@ -41,6 +36,7 @@ $yel:#FCEC5A;
 }
 .contact:hover {
     color:$gold;
+    text-decoration: underline;
 }
 @media (max-width: 850px) {
     .getStarted p{
