@@ -46,7 +46,7 @@ const FeatureSection: React.FC = () => {
           </a>
         </Link>
         {/* projects card */}
-        <Link href="/">
+        <Link href="https://github.com/alguerocode">
           <a
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
@@ -62,7 +62,7 @@ const FeatureSection: React.FC = () => {
           </a>
         </Link>
         {/* blogs card */}
-        <Link href="/">
+        <Link href="https://github.com/alguerocode/volder">
           <a
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
