@@ -26,7 +26,6 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     });
-
     API.get(`/projects/${category}`, {
       headers,
       cancelToken: source.token,
@@ -40,7 +39,6 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
         setError(err.message);
         setPending(false);
       });
-
     return () => source.cancel("request cancled");
   }, [category]);
 
@@ -66,7 +64,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
                 type="button"
                 className={`m-1 p-2 ${styles.allButton}`}
                 onClick={(e: FormEvent) => setCategory(e.currentTarget.id)}
-                disabled={isPending!}
+                disabled={isPending}
               >
                 All projects
               </button>
@@ -99,7 +97,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
             >
               {isPending ? (
                 <div
-                  className="spinner-border text-primary mt-5"
+                  className="spinner-border text-dark mt-5"
                   role="status"
                 />
               ) : !projectFetchError ? (
@@ -112,8 +110,9 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
                     key={project._id}
                   >
                     <Image
-                      className={styles.img}
-                      width="700"
+                      className={`{styles.img} border border-3 border-dark bg-white`}
+                      unoptimized={true}
+                      width="680"
                       height="180"
                       loader={({ src }) => src}
                       src={`https://gh-card.dev/repos/alguerocode/${project.repoName}.svg`}

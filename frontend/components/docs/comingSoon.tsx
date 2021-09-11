@@ -9,10 +9,17 @@ const ComingSoon: React.FC = () => {
   const [days, setDays] = useState(moment().dayOfYear());
 
   useEffect(() => {
-    setInterval(() => setSeconds(moment().seconds()), 1000);
-    setInterval(() => setMinutes(moment().minutes()), 1000 * 60);
-    setInterval(() => setHours(moment().hours()), 1000 * 60 * 60);
-    setInterval(() => setDays(moment().dayOfYear()), 1000 * 60 * 60 * 24);
+    const secId = setInterval(() => setSeconds(moment().seconds()), 1000);
+    const minId = setInterval(() => setMinutes(moment().minutes()), 1000 * 60);
+    const hourId = setInterval(() => setHours(moment().hours()), 1000 * 60 * 60);
+    const dayId = setInterval(() => setDays(moment().dayOfYear()),1000 * 60 * 60 * 24);
+    
+    return () =>{
+      clearInterval(secId);
+      clearInterval(minId);
+      clearInterval(hourId);
+      clearInterval(dayId);
+    }
   }, []);
 
   return (
@@ -27,24 +34,24 @@ const ComingSoon: React.FC = () => {
           </h2>
 
           <div className="d-flex flex-row justify-content-center align-items-center">
-            <div className={`${styles.clock} bg-white ms-3 p-3`}>
-              <p className="text-center fs-5">DAYS</p>
+            <div className={`${styles.clock} bg-white ms-3 p-2`}>
+              <p className="text-center fs-5">DAY</p>
               <span className="fs-4 px-md-3 p-sm-0 text-center">{days}</span>
             </div>
 
-            <div className={`${styles.clock} bg-white ms-3 p-3`}>
-              <p className="text-center fs-5">HOURS</p>
+            <div className={`${styles.clock} bg-white ms-3 p-2`}>
+              <p className="text-center fs-5">HOUR</p>
               <span className="fs-4 px-md-3 p-sm-0 text-center">{hours}</span>
             </div>
 
-            <div className={`${styles.clock} bg-white ms-3 p-3`}>
+            <div className={`${styles.clock} bg-white ms-3 p-2`}>
               <p className="text-center fs-5">MIN</p>
               <span className=" fs-4 px-md-3 p-sm-0 text-center">
                 {minutes}
               </span>
             </div>
 
-            <div className={`${styles.clock} bg-white ms-3 p-3`}>
+            <div className={`${styles.clock} bg-white ms-3 p-2`}>
               <p className="text-center fs-5">SEC</p>
               <span className="fs-4 px-md-3 p-sm-0 text-center">{seconds}</span>
             </div>
