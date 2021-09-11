@@ -11,7 +11,7 @@ const DocsSection: React.FC = () => {
       <section id="documents" className={styles.documents}>
         <div className="row">
           <div className="col-md-6 col-sm-10 d-flex flex-column justify-content-start ps-5 pt-4">
-           <Image src="/images/documents.png" height="400" width="400"/>
+           <Image src="/images/documents.png" height="450" width="400"/>
           </div>
           <div className="col-md-6 col-sm-10 d-flex flex-column pt-5 ms-sm-4 ms-md-0 ms-4">
               <p className="lead">documents</p>

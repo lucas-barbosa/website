@@ -1,24 +1,60 @@
+$white: #f5fcff;
+$goldy:#FFD300;
+
 .dashboard {
-  background-color: #f2f6fc;
-  padding-top: 85px;
-}
-.count {
-  background-color: #fb8d10;
+  background-color: $white;
 }
 
-.button:hover {
-  box-shadow: 0 8px 28px 0 #3d88f8;
-  background-color: #0d6efd !important;
+.buttons:hover,.allButton:hover {
+  box-shadow: -4px 4px 0 #000;
+  transform:translate(4px, -4px);
+}
+.allButton {
+  text-align:center;
+  background-color:#fff;
+  border: 2px solid #000;
+  transition: all 0.2s !important;
 }
 .projects {
-  height: 40rem;
+  height: 1000px;
+  border-left:3px solid #000;
+  border-radius: 0px!important;
+  overflow-x:hidden;
 }
-.button {
+.buttons {
+  font-size:1.1rem!important;
+  text-align:center;
+  background-color:#fff;
+  border: 2px solid #000;
   transition: all 0.2s !important;
+}
+
+.titles {
+  background: linear-gradient(to top, $goldy 50%, transparent 50%);
+  width: fit-content;
+}
+
+.img {
+  width: auto!important;
+  height: auto !important;
+
+}
+.count {
+  font-size: 1rem;
+  border-left: 2px solid #000;
+  border-radius:0px;
 }
 
 @media (max-width: 1100px) {
   .dashboard {
     margin-top: 0;
+  }
+}
+
+@media (max-width:780px) {
+  .projects {
+    border-left:0px!important;
+    border-radius: 0px!important;
+    width:100%;
   }
 }
