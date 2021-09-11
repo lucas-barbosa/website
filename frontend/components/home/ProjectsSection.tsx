@@ -44,6 +44,7 @@ const ProjectsSection: React.FC = () => {
               className="mt-1"
               width="350"
               height="90"
+              alt="alguerocode github profile logo image"
             />
             <p className="mt-1 fs-4">show github profile</p>
           </a>

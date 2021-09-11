@@ -40,7 +40,7 @@ const FeaturesSection: React.FC = () => {
           </div>
         </div>
         <div className="col-md-6 d-none d-md-block col-sm-10 d-flex align-self-end justify-self-end ps-5">
-          <Image width="500" height="500" src="/images/digital-service.png" />
+          <Image width="500" height="500" src="/images/digital-service.png" alt="alguerocode features section vector image"/>
         </div>
       </div>
     </section>

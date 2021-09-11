@@ -96,7 +96,7 @@ const ContacsSection: React.FC = () => {
                   src="/images/contact.png"
                   width="450"
                   height="450"
-                  alt="alhashicode contact vector image email location"
+                  alt="alguerocode contact vector image email location,call"
                 />
               </div>
             </div>

@@ -71,7 +71,7 @@ const NavBar: React.FC = () => {
                   src="/images/favicon.png"
                   width="65"
                   height="70"
-                  alt="alhashmicode logo image"
+                  alt="alguerocode logo image"
                 />
               </a>
             </Link>
