@@ -4,16 +4,16 @@
   <a href="https://github.com/alguerocode/alguero.tk/blob/main/LICENSE" target="_blank">
     <img alt="License: GNU" src="https://img.shields.io/badge/License-GNU-yellow.svg" />
   </a>
-  <a href="https://twitter.com/alhashmis959" target="_blank">
-    <img alt="Twitter: alhashmis959" src="https://img.shields.io/twitter/follow/alhashmis959.svg?style=social" />
+  <a href="https://twitter.com/alhashmis1" target="_blank">
+    <img alt="Twitter: alhashmis1" src="https://img.shields.io/twitter/follow/alhashmis1.svg?style=social" />
   </a>
 </p>
 
 > alguerocode is my personal website to show my projects and skills and selling my digital products I made in web development
 
-### 🏠 [Homepage](https://github.com/alhashmicode/website#readme)
+### ✨ [website](https://alguero.vercel.app)
+### 🏠 [my profile](https://github.com/alguerocode)
 
-### ✨ [Demo](https://alguero.vercel.app)
 
 ## tools used in website
 - nextjs
