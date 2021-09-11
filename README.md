@@ -52,7 +52,7 @@ npm run test
 👤 **salah alhashmi**
 
 * Website: https://alguero.vercel.app
-* Twitter: [@alhashmis959](https://twitter.com/alhashmis959)
+* Twitter: [@alhashmis1](https://twitter.com/alhashmis1)
 * Github: [@alguerocode](https://github.com/alguerocode)
 * LinkedIn: [@I don't have](https://linkedin.com/in/I don't have)
 
