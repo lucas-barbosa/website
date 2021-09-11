@@ -3,8 +3,6 @@ import type { NextPage } from "next";
 import { API } from "../api/axios";
 import type { GetStaticProps, GetStaticPropsContext } from "next";
 
-export const config = { amp: "hybrid" }
-
 // components
 import Head from "next/head";
 import HeroSection from "../components/projects/heroSection";

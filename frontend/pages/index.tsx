@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import React from "react";
 
-export const config = { amp: "hybrid" }
+
 // components
 import Head from "next/head";
 import HeroSection from "../components/home/HeroSection";

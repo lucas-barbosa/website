@@ -1,8 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
 
-export const config = { amp: "hybrid" }
-
 // components
 import ContacsSection from "../components/contacts/ContactsSection";
 import Head from "next/head";

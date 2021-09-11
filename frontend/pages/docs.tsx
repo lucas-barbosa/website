@@ -1,8 +1,6 @@
 import React from "react";
 import type { NextPage } from "next";
 
-export const config = { amp: "hybrid" }
-
 // components
 import Head from "next/head";
 import ComingSoon from "../components/docs/comingSoon";
