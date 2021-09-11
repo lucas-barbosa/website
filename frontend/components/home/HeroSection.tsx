@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
                 height="400"
                 src="/images/hero.png"
                 className="img-fluid home-image"
-                alt="alhashmicode hero section, development vector image"
+                alt="alguerocode hero section, development vector image"
               />
             </div>
           </div>
