@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> alguerocode is my personal website to show my projects and skills and selling my digital products I made in web development
+> alguerocode is my portfolio website to show my projects and skills and selling my digital products I made in web development
 
 ### ✨ [website](https://alguero.vercel.app)
 ### 🏠 [my profile](https://github.com/alguerocode)
