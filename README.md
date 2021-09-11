@@ -15,6 +15,15 @@
 
 ### ✨ [Demo](https://alguero.vercel.app)
 
+## tools used in website
+- nextjs
+- axios
+- bootstrap
+- react-toastify
+- formik
+- nodejs
+- expressjs
+
 ## Install
 
 ```sh
@@ -23,10 +32,15 @@ npm install
 
 ## Usage
 
+### run the server
 ```sh
 npm run start
 ```
-
+### run the frontend
+```sh
+cd frontend
+npm run dev
+```
 ## Run tests
 
 ```sh
