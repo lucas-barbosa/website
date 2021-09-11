@@ -24,8 +24,8 @@ const ContacsSection: React.FC = () => {
           .max(100, "email should be at most 100 characters")
           .required("email is required"),
         username: Yup.string()
-          .min(4, "username should be at least 4 characters")
-          .max(20, "username should at most than 20 characters")
+          .min(4, "username must be at least 4 characters")
+          .max(20, "username must at most than 20 characters")
           .trim()
           .required("username is required"),
         subject: Yup.string()
