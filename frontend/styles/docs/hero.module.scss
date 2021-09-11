@@ -1,0 +1,50 @@
+$goldy:#FFD300;
+$clue:#444444;
+
+.intro {
+  width: 100%;
+  padding-top: 82px;
+  padding-bottom: 60px;
+  background-image: url("/images/background.png");
+  background-size: 2000px ;
+}
+.intro h1 {
+  font-size:4rem;
+  background: linear-gradient(to top, $goldy 50%, transparent 50%);
+
+}
+.subTitle {
+  opacity: 0.9;
+  color: $clue!important;
+  font-size: 2rem;
+  width:60%;
+}
+
+.clock {
+  border: 3px solid #000!important;
+}
+@media (max-width:1600px) {
+  .intro {
+    background-size: 1500px;
+  }
+}
+@media (max-width:1300px) {
+  .intro {
+    background-size: 1300px;
+  }
+}
+@media (max-width:950px) {
+  .intro {
+    background-image: none;
+  }
+}
+@media (max-width:650px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .subTitle {
+    font-size:1.1rem;
+  width:90%;
+
+  }
+}

@@ -19,20 +19,17 @@ $bg-light:#c8ced3;
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-* ,*::before, *::after {
-  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
-  font-family: 'Sora', sans-serif;
-  box-sizing: border-box;
+html,body {
+  overflow-x: hidden;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
+* ,*::before, *::after {
+  font-family: 'Fira Code', monospace; 
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
 a {
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: none;
 }

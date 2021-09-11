@@ -1,0 +1,53 @@
+$primary: #0d6efd;
+$yel: #ffd300;
+$milk: #fff3ea;
+$clue: #d5eefd;
+.about {
+  background-color: $yel;
+}
+
+.card {
+  transition: 0.3s;
+  width: 21rem;
+  height: 420px;
+  border-radius: 0;
+  border: 2px solid #000;
+  transform: translateY(-27%);
+}
+
+.card h6 {
+  color: #ffff;
+  background-color: #000;
+  text-align: center;
+  width: 60px;
+  padding: 4px 0px 4px 0px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.card h4 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.card p {
+  color: #000;
+  transform: translate(12px, 16px);
+  background-color: $milk;
+  padding: 0 10px 0 10px;
+}
+
+.card:hover {
+  box-shadow: -9px 9px 0 #000;
+  transform: translate(5px, -30%);
+}
+
+@media (max-width: 991px) {
+  .card {
+    transform: translateY(0);
+  }
+  .card:hover {
+    box-shadow: -9px 9px 0 #000;
+    transform: translate(6px, -6px);
+  }
+}

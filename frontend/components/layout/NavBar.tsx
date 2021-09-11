@@ -25,15 +25,26 @@ const NavBar: React.FC = () => {
     // tooltip handler with (tippy.js)
 
     tippy(".subscribe", {
-      content: "<h6 class='text-muted'> 💌🙂 subscribe to get updated when new things Released!</h6>",
+      content: "<h6 class='text-muted'> 💌🙂 subscribe</h6>",
       animation: "perspective-subtle",
       placement: "bottom",
       theme: "light",
       maxWidth:195,
       allowHTML:true,
-      delay:[200, 0],
+      delay:[400, 0],
       hideOnClick:true,
     });
+    tippy(".logo", {
+      content: "<h6 class='text-muted'>Go Home 🏠</h6>",
+      animation: "perspective-subtle",
+      placement: "bottom",
+      theme: "light",
+      maxWidth:195,
+      allowHTML:true,
+      delay:[300, 0],
+      hideOnClick:true,
+    });
+
   }, []);
 
   // click handler for mobile navigation;
@@ -48,13 +59,14 @@ const NavBar: React.FC = () => {
       navbarToggle?.classList.toggle("bi-x");
     }
   };
+
   return (
     <React.Fragment>
       <header id="header" className="fixed-top">
-        <div className="container d-flex align-items-center justify-content-between">
+        <div className="container-lx d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <Link href="/">
-              <a className="btn">
+              <a className="mt-5">
                 <Image
                   src="/images/favicon.png"
                   width="65"
@@ -97,7 +109,7 @@ const NavBar: React.FC = () => {
               </li>
               <li className="dropdown">
                 <a className="nav-link">
-                  <span>Socials</span> <i className="bi bi-chevron-down"></i>
+                  <span>Socials</span><i className="bi bi-caret-down-fill mt-1 ms-1"></i>
                 </a>
                 <ul>
                   <li>
@@ -108,7 +120,7 @@ const NavBar: React.FC = () => {
                       rel="noreferrer"
                     >
                       <div className="socials-link">
-                        <i className="bi bi-github fs-5 px-1 text-dark"></i>{" "}
+                        <i className="bi bi-github fs-3 px-1 text-dark"></i>{" "}
                         github
                       </div>
                     </a>
@@ -121,7 +133,7 @@ const NavBar: React.FC = () => {
                       rel="noreferrer"
                     >
                       <div className="socials-link">
-                        <i className="bi bi-instagram fs-5 px-1 text-danger"></i>{" "}
+                        <i className="bi bi-instagram fs-3 px-1 text-danger"></i>{" "}
                         instagram
                       </div>
                     </a>
@@ -133,7 +145,7 @@ const NavBar: React.FC = () => {
                       rel="noreferrer"
                     >
                       <div className="socials-link">
-                        <i className="bi bi-discord fs-5 px-1 text-info"></i>{" "}
+                        <i className="bi bi-discord fs-3 px-1 text-info"></i>{" "}
                         discord
                       </div>
                     </a>
@@ -145,7 +157,7 @@ const NavBar: React.FC = () => {
                       rel="noreferrer"
                     >
                       <div className="socials-link">
-                        <i className="bi bi-facebook fs-5 px-1 text-primary"></i>{" "}
+                        <i className="bi bi-facebook fs-3 px-1 text-primary"></i>{" "}
                         facebook
                       </div>
                     </a>
@@ -153,13 +165,12 @@ const NavBar: React.FC = () => {
                 </ul>
               </li>
               <li>
-                <Link href="/#contact">
+                <Link href="/contacts">
                   <a
                     onClick={linksClickHandler}
                     className="nav-link link scrollto"
-                    href="#contact"
                   >
-                    Contact
+                    Contacts
                   </a>
                 </Link>
               </li>

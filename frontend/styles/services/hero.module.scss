@@ -1,0 +1,64 @@
+$dark: #10162f;
+$gold: #ffd300;
+
+.intro {
+  padding-top: 82px;
+  background-color: $dark;
+}
+.intro h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70%;
+}
+
+.intro a {
+  color: $gold;
+}
+
+.intro a:hover {
+  text-decoration: underline;
+}
+.getStarted {
+  background-color: $gold;
+  padding: 0 5px;
+  border-radius: 5px;
+  height: 55px;
+  box-shadow: -6px 6px #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.getStarted:hover {
+  box-shadow: -10px 10px #fff;
+}
+
+.getStarted p {
+  color: #000;
+  font-size: 20px;
+  line-height: 40px;
+}
+.fiverr {
+  color: $gold;
+  font-size: 20px;
+}
+.fiverr:hover {
+  text-decoration: underline;
+}
+
+.tools h3 {
+  background: linear-gradient(to top, $gold 50%, transparent 50%);
+  width: fit-content;
+}
+
+@media (max-width: 850px) {
+  .intro h2 {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+  .getStarted p {
+    font-size: 18px;
+  }
+  .fiverr {
+    font-size: 16px;
+  }
+}

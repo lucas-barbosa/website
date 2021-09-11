@@ -1,0 +1,122 @@
+$d_orange:#FB8500;
+$gold:#FFD300;
+$yel:#FCEC5A;
+$milk:#FFF0E5;
+$dark:#10162F;
+.contacts {
+  background: linear-gradient(to top,$dark 50%, transparent 50%);
+}
+.title {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: #0000;
+}
+.message {
+  font-size: 18px;
+}
+.errors {
+  position: absolute;
+  font-size: 18px;
+  top: 40px;
+  left: 20px;
+}
+
+.infoTable {
+  padding-right:0;
+}
+.formTable {
+  padding-left: 0;
+}
+
+.titleHeader {
+  font-size: 38px;
+  font-weight: 700;
+  color: #000;
+}
+
+.subTitle {
+  color: #858ea1;
+  margin: 10px 0 30px 0;
+  text-align: center;
+  font-size: 24px;
+} 
+
+.info {
+  border:2px solid #000;
+  padding: 30px;
+  width: 100%;
+  background-color: $gold;
+}
+
+.infoIcon {
+  font-size: 28px;
+  color: #000;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.infoHeader {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.infoPTag {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+}
+
+.span {
+  color:#000;
+  background:#fff;
+}
+
+.emailForm {
+  width: 100%;
+  border: 2px solid #000;
+  border-left:0;
+  padding: 30px;
+  background-color:$milk ;
+}
+
+.formGroup {
+  padding-bottom: 8px;
+}
+
+.submitButton[type="submit"] {
+  background: $yel;
+  font-size:18px;
+  border: 2px solid #000;
+  padding: 10px 24px;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+  box-shadow: -4px 4px 0 #000;
+  transform:translate(4px, -4px);
+}
+.infoIcon:hover {
+  box-shadow: -4px 4px 0 #000;
+  transform:translate(4px, -4px);
+}
+@media (max-width:600px) {
+  .info {
+    margin-right: 20px;
+  }
+  .formTable {
+    margin-left: 16px;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/projects/hero.module.css";
+import styles from "../../styles/projects/hero.module.scss";
 
 // components
 import Image from "next/image";
@@ -18,13 +18,13 @@ const HeroSection: React.FC = () => {
           </p>
           <div className="d-flex justify-content-center align-items-center mb-3">
             <a
-              className="btn btn-view btn-warning text-white fs-5 m-1 p-2 px-3 lead"
+              className="btn btn-view btn-primary text-white fs-5 m-1 p-2 px-3 lead"
               href="#dashboard"
             > 
               view projects<i className="bi bi-arrow-right-short m-1 fs-5"></i>
             </a>
             <a
-              className="btn btn-github  btn-warning text-white m-1 fs-5 p-2 px-3 lead"
+              className="btn btn-github  btn-primary text-white m-1 fs-5 p-2 px-3 lead"
               target="_tab"
               href={process.env.github}
             >
@@ -39,28 +39,27 @@ const HeroSection: React.FC = () => {
                `${something}`
             */}   
             <Image
-              width="320"
+              width="300"
               height="170"
               unoptimized={true}
-              className={styles.img}
               loader={({src}):string => src}
               src={`${process.env.language_states}`}
               alt="alguerocode github most language states, image"
             />
             <Image
-              width="380"
+              width="360"
               height="170"
               unoptimized={true}
-              className={`status-img ms-2 ${styles.img}`}
+              className="mx-2"
               loader={({src}):string => src}
               src={`${process.env.github_states}`}
               alt="alguerocode github states, image"
             />
             <Image
-              width="380"
+              width="360"
               height="170"
               unoptimized={true}
-              className={`ms-2 ${styles.img}`}
+              className="mx-2"
               loader={({src}):string => src}
               src={`${process.env.streak_states}`}
               alt="alguerocode github streak states, image"
