@@ -30,7 +30,7 @@ const FeatureSection: React.FC = () => {
         className={`${styles.about} container-lx d-flex justify-content-center row align-items-center`}
       >
         {/* digital service card */}
-        <Link href="https://alguerocode.github.io/superapi"/>
+        <Link href="https://alguerocode.github.io/superapi">
           <a
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
