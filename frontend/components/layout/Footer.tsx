@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                     name="email"
                   />
                   <button
-                    className={subscribe-button}
+                    className="subscribe-button"
                     type="submit"
                     disabled={loading}
                   >
