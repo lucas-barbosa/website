@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
       },
       validationSchema: Yup.object({
         email: Yup.string()
+          .required("Email is required, Enter your Email")
           .email("Email is invaled")
           .max(100, "Email should at most 100 characters long"),
       }),
@@ -77,8 +78,8 @@ const Footer: React.FC = () => {
                     name="email"
                   />
                   <button
-                    className="subscribe-button"
                     type="submit"
+                    className="subscribe-button"
                     disabled={loading}
                   >
                     {!loading ? "subscribe" : "loading..."}
