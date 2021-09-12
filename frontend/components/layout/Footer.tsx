@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         }
       },
     });
-  useEffect(() => { 
+  useEffect(() => {
     tippy(".social-links a", {
       theme: "light",
     });
@@ -76,15 +76,17 @@ const Footer: React.FC = () => {
                     type="email"
                     name="email"
                   />
-                  <input
+                  <button
+                    className={subscribe-button}
                     type="submit"
-                    value={!loading ? "subscribe" : "loading..."}
                     disabled={loading}
-                  />
+                  >
+                    {!loading ? "subscribe" : "loading..."}
+                  </button>
                 </form>
                 {touched.email && errors.email ? (
-                    <p className="subscribe-error">{errors.email}</p>
-                  ) : null}
+                  <p className="subscribe-error">{errors.email}</p>
+                ) : null}
               </div>
             </div>
 

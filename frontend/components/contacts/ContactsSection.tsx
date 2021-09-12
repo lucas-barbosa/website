@@ -29,22 +29,23 @@ const ContacsSection: React.FC = () => {
           .trim()
           .required("username is required"),
         subject: Yup.string()
-          .min(8, "subject should be at least 8 characters")
-          .max(50, "subject should at most than 50 characters")
-          .trim()
-          .required("subject is required"),
+        .min(8, "subject should be at least 8 characters")
+        .max(50, "subject should at most than 50 characters")
+        .trim()
+        .required("subject is required"),
         message: Yup.string()
-          .min(20, "message should be at least 20 characters")
-          .max(300, "message should be at most 300 characters")
+        .min(20, "message should be at least 20 characters")
+        .max(300, "message should be at most 300 characters")
           .trim()
           .required("message is required"),
-      }),
+        }),
       onSubmit: async (data) => {
         try {
           setSending(true);
           const res = await API.put("/contacts", data);
           setSending(false);
           toast.success("successfully send the contact 👍🎉");
+          clearFromInputes();
         } catch (err: any) {
           console.error(err); // toustify
           if (err.response.status == 406) {
@@ -56,7 +57,13 @@ const ContacsSection: React.FC = () => {
         }
       },
     });
-
+    
+    const clearFromInputes = () =>{
+      values.email = "";
+      values.username = "";
+      values.subject = "";
+      values.message = ""
+    }
   return (
     <React.Fragment>
       <section id="contact" className={`${styles.contacts} bg-light pt-4 pb-5`}>
