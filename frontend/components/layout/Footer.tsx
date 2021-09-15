@@ -129,30 +129,30 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="row">
-          <ul className="d-flex align-items-end justify-content-center">
+          <ul className="d-flex align-items-end justify-content-center flex-wrap list-unstyled">
             <li>
               <Link href="/">
-                <a className="text-muted me-5 fs-5">Home</a>
+                <a className="text-muted pe-5">Home</a>
               </Link>
             </li>
             <li>
               <Link href="/services">
-                <a className="text-muted me-5">Digtal Services</a>
+                <a className="text-muted pe-5">Digtal Services</a>
               </Link>
             </li>
             <li>
               <Link href="/projects">
-                <a className="text-muted me-5">Projects</a>
+                <a className="text-muted pe-5">Projects</a>
               </Link>
             </li>
             <li>
               <Link href="/docs">
-                <a className="text-muted me-5">Documents</a>
+                <a className="text-muted pe-5">Documents</a>
               </Link>
             </li>
             <li>
               <Link href="/contacts">
-                <a className="text-muted me-5">Contacts</a>
+                <a className="text-muted pe-5">Contacts</a>
               </Link>
             </li>
           </ul>
