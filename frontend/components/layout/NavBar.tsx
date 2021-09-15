@@ -175,7 +175,7 @@ const NavBar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#subscribe">
+                <Link href="#subscribe">
                   <a onClick={linksClickHandler} className="subscribe">
                     subscribe
                   </a>

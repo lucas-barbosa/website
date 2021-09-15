@@ -2,8 +2,9 @@ $dark: #10162f;
 $gold: #ffd300;
 
 .intro {
-  padding-top: 82px;
+  padding-top: 100px;
   background-color: $dark;
+  padding-bottom:70px;
 }
 .intro h2 {
   color: #fff;
@@ -43,11 +44,6 @@ $gold: #ffd300;
 }
 .fiverr:hover {
   text-decoration: underline;
-}
-
-.tools h3 {
-  background: linear-gradient(to top, $gold 50%, transparent 50%);
-  width: fit-content;
 }
 
 @media (max-width: 850px) {
