@@ -1,48 +1,56 @@
-$dark:#10162F;
-$gold:#FFD300;
-$yel:#FCEC5A;
+$dark: #10162f;
+$gold: #ffd300;
+$yel: #fcec5a;
 
 .features {
-    padding-top: 20px;
-    background-color:$dark;
-    padding-bottom:30px;
+  padding-top: 80px;
+  background-color: $dark;
+  padding-bottom: 90px;
 }
 
 .features h1 {
-    color: #ffff;
+  color: #ffff;
 }
 
 .getStarted {
-    background-color:$gold;
-    padding:0 5px;
-    border-radius: 5px;
-    height:55px;
-    box-shadow:  -6px 6px #fff;
-    transition: all 0.3s ease-in-out;
+  background-color: $gold;
+  padding: 0 5px;
+  border-radius: 5px;
+  height: 55px;
+  box-shadow: -6px 6px #fff;
+  transition: all 0.3s ease-in-out;
 }
 
 .getStarted:hover {
-    box-shadow:  -10px 10px #fff;
+  box-shadow: -10px 10px #fff;
 }
 
-.getStarted p{
-    color:#000;
-    font-size:22px;
-    line-height:40px;
+.getStarted p {
+  color: #000;
+  font-size: 22px;
+  line-height: 40px;
 }
 .contact {
-    color:$yel;
-    font-size:20px;
+  color: $yel;
+  font-size: 19px;
 }
 .contact:hover {
-    color:$gold;
-    text-decoration: underline;
+  color: $gold;
+  text-decoration: underline;
 }
 @media (max-width: 850px) {
-    .getStarted p{
-        font-size:18px;
-    }
-    .contact {
-        font-size:16px;
-    }
+  .getStarted p {
+    font-size: 18px;
   }
+  .contact {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .getStarted p {
+    font-size: 15px;
+  }
+  .contact {
+    font-size: 14px;
+  }
+}
