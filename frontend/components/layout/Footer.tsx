@@ -29,7 +29,6 @@ const Footer: React.FC = () => {
           setLoading(false);
           toast.success("successfully subscribed 👍🎉");
           values.email = "";
-
         } catch (err: any) {
           console.error(err);
           if (err.response.status == 406) {
@@ -44,7 +43,7 @@ const Footer: React.FC = () => {
         }
       },
     });
-  useEffect(() => { 
+  useEffect(() => {
     tippy(".social-links a", {
       theme: "light",
     });
@@ -83,8 +82,13 @@ const Footer: React.FC = () => {
                   />
                 </form>
                 {touched.email && errors.email ? (
-                    <p className="subscribe-error">{errors.email}</p>
-                  ) : null}
+                  <React.Fragment>
+                    <p className="subscribe-error">
+                      <i className="bi bi-exclamation-circle-fill text-danger d-inline me-2"></i>
+                      {errors.email}
+                    </p>
+                  </React.Fragment>
+                ) : null}
               </div>
             </div>
 

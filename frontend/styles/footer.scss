@@ -77,10 +77,11 @@ $sea: #3a10e5;
 }
 
 .subscribe-error {
-  font-size: 18px !important;
+  font-size: 17px !important;
   position: absolute;
-  color: red;
-  transform: translate(-350px, -30px);
+  font-family: monospace, sans-serif; 
+  color:red ;
+  transform: translate(-30%, -30px);
 }
 
 #footer .footer-top .social-links {
@@ -133,18 +134,8 @@ $sea: #3a10e5;
     margin: 20px 10px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 430px) {
   .subscribe-error {
-    transform: translate(-200px, -30px);
-  }
-}
-@media (max-width: 650px) {
-  .subscribe-error {
-    transform: translate(-100px, -30px);
-  }
-}
-@media (max-width: 400px) {
-  .subscribe-error {
-    transform: translate(-50px, -30px);
+    transform: translate(-20%, -30px);
   }
 }
