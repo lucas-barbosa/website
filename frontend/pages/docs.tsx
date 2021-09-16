@@ -11,14 +11,8 @@ const Blogs: NextPage = () => {
       <Head>
         <title>Alguerocode | Documents</title>
         <meta title="Alguerocode Documents" />
-        <meta
-          name="keywords"
-          content="coding, web development, programming, javascript, projects , github, profiles, documents, blogs, developer blogs,alguerocode, alguero"
-        />
-        <meta
-          name="description"
-          content="Find out my interesting documents I wrote about programming, web development and coding."
-        />
+        <meta name="keywords" content="coding, web development, programming, javascript, projects , github, profiles, documents, blogs, developer blogs,alguerocode, alguero"/>
+        <meta name="description" content="Find out my interesting documents I wrote about programming, web development and coding."/>
       </Head>
       <ComingSoon />
     </React.Fragment>

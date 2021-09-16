@@ -40,14 +40,8 @@ const Projects: NextPage<ProjectsProps> = ({ categories }) => {
       <Head>
         <title>Alguerocode | Projects</title>
         <meta title="Alguerocode Projects" />
-        <meta
-          name="keywords"
-          content="coding, web development, programming, javascript, projects , github, profiles,alguerocode, alguero"
-        />
-        <meta
-          name="description"
-          content="find out my projects I made in web development and see my github profile, skill I have, alguerocode"
-        />
+        <meta name="keywords" content="coding, web development, programming, javascript, projects , github, profiles,alguerocode, alguero"/>
+        <meta name="description" content="find out my projects I made in web development and see my github profile, skill I have, alguerocode"/>
       </Head>
       <HeroSection />
       <Dashboard categories={categories} />

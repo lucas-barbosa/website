@@ -41,27 +41,28 @@ const HeroSection: React.FC = () => {
                `${something}`
             */}
             <Image
-              width="300"
-              height="170"
+              width="350"
+              height="220"
               unoptimized={true}
+              className="px-md-1"
               loader={({ src }): string => src}
               src={`${process.env.language_states}`}
               alt="alguerocode github most language states, image"
             />
             <Image
-              width="360"
-              height="170"
+              width="420"
+              height="220"
+              className="px-2 px-md-1"
               unoptimized={true}
-              className="mx-2"
               loader={({ src }): string => src}
               src={`${process.env.github_states}`}
               alt="alguerocode github states, image"
             />
             <Image
-              width="360"
-              height="170"
+              width="420"
+              height="220"
               unoptimized={true}
-              className="mx-2"
+              className="px-2 px-md-1"
               loader={({ src }): string => src}
               src={`${process.env.streak_states}`}
               alt="alguerocode github streak states, image"

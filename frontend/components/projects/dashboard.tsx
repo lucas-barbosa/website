@@ -3,9 +3,11 @@ import type { ProjectsProps as DashboardProps } from "../../pages/projects";
 import axios from "axios";
 import { API } from "../../api/axios";
 import styles from "../../styles/projects/dashboard.module.scss";
+import tippy from "tippy.js";
 
 // components
 import Image from "next/image";
+import AboutMe from "./AboutMe";
 
 type Projects = {
   _id: string;
@@ -39,6 +41,8 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
   }, [category,allProjects]);
 
   useEffect(() => {
+
+    // fetch projects data
     setPending(true);
     const source = axios.CancelToken.source();
     const headers = new Headers({
@@ -58,6 +62,18 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
         setError(err.message);
         setPending(false);
       });
+    
+    // add tooltip to projects image
+    tippy(`.${styles.projectImg}`, {
+      content: "<h6 class='text-muted'> 💌🙂 subscribe</h6>",
+      animation: "perspective-subtle",
+      placement: "bottom",
+      theme: "light",
+      maxWidth:195,
+      allowHTML:true,
+      delay:[400, 0],
+      hideOnClick:true,
+    });
     return () => source.cancel("request cancled");
   }, []);
 
@@ -66,24 +82,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
       <section id="dashboard" className={styles.dashboard}>
         <div className="row d-flex align-items-start justify-content-center">
           <div className="container-lg col-md-12 col-lg-6 rounded pb-3">
-            <div className="justify-content-center d-flex flex-column align-items-center">
-              <h4 className={`${styles.titles} fs-3 text-start my-2 ms-2`}>
-                ABOUT ME
-              </h4>
-              <Image
-                src="https://avatars.githubusercontent.com/u/75932477?v=4"
-                width="130"
-                height="130"
-                className="rounded-circle"
-                unoptimized={true}
-                loader={({ src }) => src}
-              ></Image>
-              <p className="text-muted lead ms-3 mt-2 text-center px-5">
-                Hi, I am full-stack web developer backend and frontend, I
-                intersting in open source projects and I love to show my skills
-                to public
-              </p>
-            </div>
+            <AboutMe/>
             <div className="d-flex align-items-center justify-content-center">
               <h4 className={`${styles.titles} fs-3 text-center my-4 ms-2`}>
                 BROWSE BY CATEGORIES
@@ -128,7 +127,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
             ref={projectsTableEl}
           >
             <div className="d-flex align-items-center justify-content-center">
-              <h4 className={`${styles.titles} text-start my-4 ms-2 fs-3`}>
+              <h4 className="text-start my-4 ms-2 fs-3">
                 MY PROJECTS
               </h4>
             </div>
@@ -142,16 +141,16 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
                 curProjects?.map((project) => (
                   <a
                     href={`https://github.com/alguerocode/${project.repoName}`}
-                    className="github-link px-md-0 px-2"
+                    className={`${styles.projectLink} my-2`}
                     rel="noreferrer"
                     target="_blank"
                     key={project._id}
                   >
                     <Image
-                      className="border border-3 border-dark bg-light"
                       unoptimized={true}
-                      width="680"
-                      height="190"
+                      className="bg-white"
+                      width="690"
+                      height="200"
                       loader={({ src }) => src}
                       src={`https://gh-card.dev/repos/alguerocode/${project.repoName}.svg?fullname=`}
                       alt={`alguero github repository : ${project.repoName}`}
