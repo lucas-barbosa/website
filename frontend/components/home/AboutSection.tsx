@@ -54,7 +54,7 @@ const FeatureSection: React.FC = () => {
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
             <h6 className="align-self-start">DEV</h6>
-            <h4>find out more about devSupporters organization work</h4>
+            <h4>find out more about devSupporters work</h4>
             <Image
               src="/images/web.png"
               width="200"

@@ -2,9 +2,9 @@ $dark: #10162f;
 $gold: #ffd300;
 
 .intro {
-  padding-top: 100px;
+  padding-top: 120px;
   background-color: $dark;
-  padding-bottom:70px;
+  padding-bottom: 90px;
 }
 .intro h2 {
   color: #fff;
@@ -53,6 +53,15 @@ $gold: #ffd300;
   }
   .getStarted p {
     font-size: 18px;
+  }
+  .fiverr {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .getStarted {
+   
   }
   .fiverr {
     font-size: 16px;

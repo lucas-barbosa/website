@@ -17,14 +17,14 @@ const HeroSection: React.FC = () => {
         <div className="d-flex flex-row mt-4 justify-content-center align-items-center">
           <Link href="/services">
             <a
-              className={`${styles.getStarted} d-flex flex-row justify-content-center ps-3`}
+              className={`${styles.getStarted} d-flex flex-row justify-content-center ps-2 `}
             >
               <p className="mt-2">Get started</p>{" "}
               <i className="bi bi-arrow-right-short fs-2 mt-2 text-black"></i>
             </a>
           </Link>
           <Link href="https://www.fiverr.com/alhashmicode" prefetch={false}>
-            <a className={`${styles.fiverr} align-self-center ms-5`}>
+            <a className={`${styles.fiverr} align-self-center ms-3 ms-md-5`}>
               Fiverr profile
             </a>
           </Link>
