@@ -75,6 +75,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
                   type="button"
                   className={`${styles.buttons} text-center m-1 p-2 ps-3`}
                   key={category._id}
+                  disabled={isPending}
                   onClick={(e: FormEvent) => setCategory(e.currentTarget.id)}
                 >
                   {category.category}

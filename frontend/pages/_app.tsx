@@ -18,6 +18,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <React.Fragment>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="7UvOUxx4cwvdtx_nYa_cpI0ieyyf6higqA0ofqdYPGo" />
         <link href="/images/favicon.png" rel="icon"/>
         <meta
           name="keywords"
