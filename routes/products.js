@@ -5,5 +5,4 @@ const productsRouter = express.Router();
 
 productsRouter.get('/', productsController.get_all_products);
 
-
 module.exports = productsRouter;

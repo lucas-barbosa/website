@@ -12,35 +12,133 @@ const FeaturesSection: React.FC = () => {
         <i className="bi bi-bookmark-star fs-1 me-2 mb-2 text-white"></i>
         <h1 className="text-center">Check our Features</h1>
       </div>
-      <div className="row">
-        <div className="col-md-6 col-sm-10 d-flex flex-column justify-content-start ps-5 pt-5">
-          <p className="text-white lead">digital service</p>
-          <h3 className="text-white pt-2">
-            get you dream projects done with my digital services, superior
+      <div className="row justify-content-between justify-content-lg-center">
+        <div className="col-md-6 col-12 col-lg-4 col-xxl-3 d-flex flex-column justify-content-center justify-content-md-startpe-5 ps-5  pe-5 pe-md-0 ps-5 pt-4">
+          <p className="text-white lead text-center text-md-start">
+            digital service
+          </p>
+          <h3 className="text-white pt-2 text-center text-md-start fs-4">
+            get your dream project done with my digital services, superior
             products.
           </h3>
-          <h3 className="text-white pt-4">
+          <h3 className="text-white pt-4 text-center text-md-start fs-4">
             figure out the service products you want. and contact me in contacts
-            section or social media links above.
+            section or or send me message by social media links an above.
           </h3>
-          <div className="d-flex flex-row mt-4">
+          <div className="d-flex flex-row mt-5 justify-content-center justify-content-md-start align-items-end">
             <Link href="/services">
               <a
-                className={`${styles.getStarted} d-flex flex-row justify-content-center ps-2`}
+                className={`${styles.getStarted} d-flex flex-row justify-content-center ps-2 `}
               >
-                <p className="mt-2">Get started</p>{" "}
-                <i
-                  className="bi bi-arrow-right-short fs-2 mt-2 text-black"
-                ></i>
+                <p className="mt-2">Get started</p>
+                <i className="bi bi-arrow-right-short fs-2 mt-2 text-black"></i>
               </a>
             </Link>
             <Link href="/contacts">
-              <a className={`${styles.contact} align-self-center ms-5`}>contact us</a>
+              <a className={`${styles.contact} align-self-center ms-4`}>
+                contact me
+              </a>
             </Link>
           </div>
         </div>
-        <div className="col-md-6 d-none d-md-block col-sm-10 d-flex align-self-end justify-self-end ps-5">
-          <Image width="500" height="500" src="/images/digital-service.png" alt="alguerocode features section vector image"/>
+        <div className="col-md-6  col-12 d-md-block col-sm-12 pt-4">
+          <div className="row justify-content-center">
+          <p className="text-white lead text-center text-md-start col-12 col-lg-7">
+            Some of my tools
+          </p>
+          </div>
+          <div className="row justify-content-center justify-content-md-start justify-content-lg-center align-items-between">
+            <div className="col-8 d-flex justify-content-around">
+              <Image
+                src="/images/tools/javascript.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/css-3.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/nodejs.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/html-5.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+            </div>
+            <div className="col-8 d-flex justify-content-around mt-5">
+              <Image
+                src="/images/tools/git.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/mongodb.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/bootstrap.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/jest.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+            </div>
+            <div className="col-8 d-flex justify-content-around mt-5">
+              <Image
+                src="/images/tools/postgresql.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/react.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/sass.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+              <Image
+                src="/images/tools/typescript.svg"
+                width="90"
+                height="90"
+                className="ps-3"
+                alt="svg image , alguerocode dvelopment svg image"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

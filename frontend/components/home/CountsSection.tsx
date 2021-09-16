@@ -5,6 +5,7 @@ const CountsSection: React.FC = () => {
   return (
     <React.Fragment>
       <section id="counts" className={styles.counts}>
+      <h2 className="mb-4 text-center">My development work</h2>
         <div className="container-lg">
           <div className="row">
             <div className="col-lg-3 col-md-6">
@@ -19,7 +20,7 @@ const CountsSection: React.FC = () => {
             <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
               <div className={styles.countBox}>
                 <h6>STATES</h6>
-                <h4>my development projects</h4>
+                <h4>my achieved projects</h4>
                 <span className={styles.span}>
                   {process.env.projects_count}
                 </span>
@@ -41,7 +42,7 @@ const CountsSection: React.FC = () => {
             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
               <div className={styles.countBox}>
                 <h6>STATES</h6>
-                <h4>digital service products</h4>
+                <h4>offering digital tasks</h4>
                 <span className={styles.span}>{process.env.docs_count}</span>
                 <i className="bi bi-bag-check"></i>
               </div>

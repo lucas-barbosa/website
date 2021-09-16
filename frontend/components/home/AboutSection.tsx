@@ -30,12 +30,14 @@ const FeatureSection: React.FC = () => {
         className={`${styles.about} container-lx d-flex justify-content-center row align-items-center`}
       >
         {/* digital service card */}
+
         <Link href="https://alguerocode.github.io/superapi">
+
           <a
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
             <h6 className="align-self-start">API</h6>
-            <h4>backend API service for fetching data</h4>
+            <h4>learn more about superAPI backend service</h4>
             <Image
               src="/images/api.png"
               width="200"
@@ -46,28 +48,31 @@ const FeatureSection: React.FC = () => {
           </a>
         </Link>
         {/* projects card */}
-        <Link href="https://github.com/alguerocode">
+
+        <Link href="https://github.com/devSupporters">
           <a
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
-            <h6 className="align-self-start">WEB</h6>
-            <h4>expolore tools to push your projects build</h4>
+            <h6 className="align-self-start">DEV</h6>
+            <h4>find out more about devSupporters organization work</h4>
             <Image
               src="/images/web.png"
               width="200"
               height="200"
               alt="alguerocde website tools image"
             />
-            <p className="align-self-end mt-3">explore tools</p>
+            <p className="align-self-end mt-3">organization</p>
           </a>
         </Link>
         {/* blogs card */}
-        <Link href="https://github.com/alguerocode/volder">
+        
+        <Link href="https://github.com/devSupporters/volder">
+
           <a
             className={`${styles.card} card m-3 d-flex flex-column justify-content-between align-items-center`}
           >
             <h6 className="align-self-start">NPM</h6>
-            <h4 className="">volder npm package for object validator and middleware</h4>
+            <h4 className="">volder npm package for object validating and more</h4>
             <Image
               src="/images/npm.png"
               width="200"
@@ -78,7 +83,6 @@ const FeatureSection: React.FC = () => {
           </a>
         </Link>
         {/*Count Component Section */}
-        <h2 className="ms-5 mt-md-3 mt-lg-0 mb-4 ps-5 text-sm-center text-md-start text-lx-center">our development work</h2>
         <CountsSection />
       </section>
     </React.Fragment>
