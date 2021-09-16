@@ -6,7 +6,18 @@ $dark:#10162F;
   background-color:$dark;
 }
 
+
 .subTitle {
   opacity: 0.9;
   color: rgb(210, 234, 255) !important;
+}
+
+@media (max-width:490px) {
+  .subTitle {
+    font-size:1rem;
+  }
+  .intro a {
+    font-size:13px!important;
+    padding:4px 10px!important;
+  }
 }

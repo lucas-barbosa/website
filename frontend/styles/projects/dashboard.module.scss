@@ -31,14 +31,8 @@ $goldy:#FFD300;
 
 .titles {
   background: linear-gradient(to top, $goldy 50%, transparent 50%);
-  width: fit-content;
 }
 
-.img {
-  width: auto!important;
-  height: auto !important;
-
-}
 .count {
   font-size: 1rem;
   border-left: 2px solid #000;
@@ -56,5 +50,29 @@ $goldy:#FFD300;
     border-left:0px!important;
     border-radius: 0px!important;
     width:100%;
+  }
+}
+@media (max-width:1296px) {
+  .buttons{
+  font-size:1rem!important;
+  }
+  .counts {
+  font-size: 14px;
+
+  }
+}
+@media (max-width:1000px) {
+  .buttons{
+  font-size:14px!important;
+  padding:4px 4px 4px 6px!important; 
+  }
+  .counts {
+  font-size: 13px;
+
+  }
+}
+@media (max-width:820px) {
+  .titles {
+    font-size: 1.5rem!important;
   }
 }

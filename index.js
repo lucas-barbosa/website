@@ -3,7 +3,11 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const path = require("path");
 const cors = require("cors");
-// require("dotenv").config();
+
+/* this dotenv for development enviroument, set your db URI
+ * in .env file and remove commented code line underneath 
+*/
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
