@@ -1,5 +1,6 @@
 import React, { useState, useEffect, FormEvent, useMemo, useRef } from "react";
 import type { ProjectsProps as DashboardProps } from "../../pages/projects";
+import { useTransition } from "react-spring";
 import axios from "axios";
 import { API } from "../../api/axios";
 import styles from "../../styles/projects/dashboard.module.scss";
@@ -8,6 +9,7 @@ import tippy from "tippy.js";
 // components
 import Image from "next/image";
 import AboutMe from "./AboutMe";
+import Modal from "../modal/Modal";
 
 type Projects = {
   _id: string;
@@ -22,6 +24,13 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
   const [isPending, setPending] = useState<boolean>(false);
   const [projectFetchError, setError] = useState<boolean | string>(false);
   const projectsTableEl = useRef<HTMLDivElement | any>();
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const ModalTransitions = useTransition(modalVisible , {
+    from: { opacity: 0, transform: "translateY(-40px)" },
+    enter: { opacity: 1, transform: "translateY(0px)" },
+    leave: { opacity: 0, transform: "translateY(-40px)" }
+  });
 
   const curProjects: Projects = useMemo(() => {
  
@@ -140,7 +149,8 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
               ) : !projectFetchError ? (
                 curProjects?.map((project) => (
                   <a
-                    href={`https://github.com/alguerocode/${project.repoName}`}
+                    // href={`https://github.com/alguerocode/${project.repoName}`}
+                    onClick={() => setModalVisible(true)}
                     className={`${styles.projectLink} my-2`}
                     rel="noreferrer"
                     target="_blank"
@@ -168,6 +178,16 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
             </div>
           </div>
         </div>
+        {/* for test */}
+        {ModalTransitions(
+        (item,{opacity, transform}:any) =>
+             <Modal
+              closeModal={() => setModalVisible(false)}
+            />
+          )
+      }
+        {/* for test */}
+
       </section>
     </React.Fragment>
   );
