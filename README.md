@@ -7,6 +7,12 @@
   <a href="https://twitter.com/alhashmis1" target="_blank">
     <img alt="Twitter: alhashmis1" src="https://img.shields.io/twitter/follow/alhashmis1.svg?style=social" />
   </a>
+  <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/alguerocode/website" alt="Stars Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/alguerocode/website" alt="Forks Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/alguerocode/website" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/alguerocode/website" alt="Issues Badge"/></a>
+<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/alguerocode/website?color=2b9348"></a>
+
 </p>
 
 > alguerocode is my portfolio website to show my projects and skills and selling my digital products I made in web development
