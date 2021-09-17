@@ -6,7 +6,6 @@ import { Project } from "./index";
 interface ProjectsTableProps {
   isPending: boolean;
   projectFetchError: boolean | string;
-  projectsTableEl: object;
   curProjects: Project[];
   modalOpen: boolean;
   setCurSelectedProject: Function;
@@ -16,7 +15,6 @@ interface ProjectsTableProps {
 
 const ProjectsTable: React.FC<ProjectsTableProps> = ({
   isPending,
-  projectsTableEl,
   setCurSelectedProject,
   projectFetchError,
   curProjects,
@@ -30,8 +28,7 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({
   };
   return (
     <div
-      className={`overflow-scroll col-md-12 col-lg-6 rounded mt-md-0 mt-3 pb-3 ${styles.projects}`}
-      ref={projectsTableEl}
+      className={`overflow-scroll col-md-12 col-lg-6 rounded mt-md-0 mt-3 pb-3 ${styles.projects} projects-table`}
     >
       <div className="d-flex align-items-center justify-content-center">
         <h4 className="text-start my-4 ms-2 fs-3">MY PROJECTS</h4>

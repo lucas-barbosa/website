@@ -7,7 +7,7 @@ const cors = require("cors");
 /* this dotenv for development enviroument, set your db URI
  * in .env file and remove commented code line underneath 
 */
-// require("dotenv").config();
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;

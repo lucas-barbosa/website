@@ -22,7 +22,6 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
   const [category, setCategory] = useState<string>("");
   const [isPending, setPending] = useState<boolean>(false);
   const [projectFetchError, setError] = useState<boolean | string>(false);
-  const projectsTableEl = useRef<HTMLDivElement | any>();
   const [modalOpen, setModalOpen] = useState(false);
   const [curSelectedProject, setCurSelectedProject] = useState<Project| null>(null);
 
@@ -38,8 +37,9 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
     });
 
     // projects table and scroll to top
-    if (projectsTableEl.current?.scrollTop > 0) {
-      projectsTableEl.current?.scrollTo({ top: 0, behavior: "smooth" });
+    if(typeof document !== undefined) {
+      const projectsTableEl = document.querySelector<HTMLDivElement>(".projects-table")
+      projectsTableEl?.scrollTop && projectsTableEl?.scrollTop > 0 && projectsTableEl?.scrollTo({ top: 0, behavior: "smooth" })
     }
 
     return filterdProjects;
@@ -80,7 +80,6 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
           />
           <ProjectsTable
             isPending={isPending}
-            projectsTableEl={projectsTableEl}
             projectFetchError={projectFetchError}
             setCurSelectedProject={setCurSelectedProject}
             curProjects={curProjects}
