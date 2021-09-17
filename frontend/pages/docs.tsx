@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 
 // components
 import Head from "next/head";
-import ComingSoon from "../components/docs/comingSoon";
+import ComingSoon from "../components/coming-soon/comingSoon";
 
 const Blogs: NextPage = () => {
   return (

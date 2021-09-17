@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../../styles/projects/dashboard/projects.module.scss";
-import { Projects } from "./index";
+import { Project } from "./index";
 
 interface ProjectsTableProps {
   isPending: boolean;
   projectFetchError: boolean | string;
   projectsTableEl: object;
-  curProjects: Projects;
+  curProjects: Project[];
   modalOpen: boolean;
+  setCurSelectedProject: Function;
   close: () => void;
   open: () => void;
 }
@@ -16,12 +17,17 @@ interface ProjectsTableProps {
 const ProjectsTable: React.FC<ProjectsTableProps> = ({
   isPending,
   projectsTableEl,
+  setCurSelectedProject,
   projectFetchError,
   curProjects,
   modalOpen,
   close,
   open,
 }) => {
+  const projectClickHanlder = (project: Project) => {
+    setCurSelectedProject(project);
+    modalOpen ? close() : open();
+  };
   return (
     <div
       className={`overflow-scroll col-md-12 col-lg-6 rounded mt-md-0 mt-3 pb-3 ${styles.projects}`}
@@ -39,7 +45,7 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({
         ) : !projectFetchError ? (
           curProjects?.map((project) => (
             <button
-              onClick={() => (modalOpen ? close() : open())}
+              onClick={projectClickHanlder.bind(this, project)}
               className={`${styles.projectLink} my-2`}
               key={project._id}
             >

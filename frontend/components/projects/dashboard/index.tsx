@@ -10,25 +10,26 @@ import Categories from "./Categories";
 import ProjectsTable from "./Projects";
 import Modal from "../../modal/Modal";
 
-export type Projects = {
+export type Project = {
   _id: string;
   title: string;
   repoName: string;
   categories: string[];
-}[];
+};
 
 const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
-  const [allProjects, setAllProjects] = useState<Projects | []>([]);
+  const [allProjects, setAllProjects] = useState<Project[] | []>([]);
   const [category, setCategory] = useState<string>("");
   const [isPending, setPending] = useState<boolean>(false);
   const [projectFetchError, setError] = useState<boolean | string>(false);
   const projectsTableEl = useRef<HTMLDivElement | any>();
   const [modalOpen, setModalOpen] = useState(false);
+  const [curSelectedProject, setCurSelectedProject] = useState<Project| null>(null);
 
   const open = () => setModalOpen(true);
   const close = () => setModalOpen(false);
 
-  const curProjects: Projects = useMemo(() => {
+  const curProjects: Project[] = useMemo(() => {
     // filter projects by category when category is changed
     if (category === "") return allProjects;
 
@@ -81,13 +82,14 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
             isPending={isPending}
             projectsTableEl={projectsTableEl}
             projectFetchError={projectFetchError}
+            setCurSelectedProject={setCurSelectedProject}
             curProjects={curProjects}
             modalOpen={modalOpen}
             close={close}
             open={open}
           />
           <AnimatePresence initial={false} exitBeforeEnter={true}>
-            {modalOpen && <Modal handleClose={close} text="welcome there" />}
+            {modalOpen && <Modal handleClose={close} curSelectedProject={curSelectedProject} />}
           </AnimatePresence>
         </div>
       </section>
