@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 
 const sendEmailToNewSubscriber = (email) => {
     transporter.sendMail({
-        from:"alguerocode full-stack developer",
+        from:process.env.EMAIL,
         to:email,
         subject:"thank you for subscribing",
         text:"thank you for subscribing to my alguerocode portfolio website , I hope you to see my github account https://github.com/alguerocode"
