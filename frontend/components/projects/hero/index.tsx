@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "../../styles/projects/hero.module.scss";
+import styles from "../../../styles/projects/hero.module.scss";
 
 // components
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const HeroSection: React.FC = () => {
   return (
@@ -19,18 +20,23 @@ const HeroSection: React.FC = () => {
           </p>
           <div className="d-flex justify-content-center align-items-center mb-3 my-0 my-md-5">
             <Link href="#dashboard" scroll={true}>
-              <a className="btn btn-view btn-primary text-white fs-5 m-1 p-2 px-3 lead">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="btn btn-view btn-primary text-white fs-5 m-1 p-2 px-3 lead"
+              >
                 view projects
                 <i className="bi bi-arrow-right-short m-1 fs-5"></i>
-              </a>
+              </motion.button>
             </Link>
             <Link href={`${process.env.github}`}>
-              <a
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className="btn btn-github  btn-primary text-white m-1 fs-5 p-2 px-3 lead ms-0 ms-md-3"
-                target="_tab"
               >
                 <i className="bi bi-github m-1 fs-5"></i> Github profile
-              </a>
+              </motion.button>
             </Link>
           </div>
         </header>

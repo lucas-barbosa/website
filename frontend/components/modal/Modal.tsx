@@ -7,7 +7,7 @@ interface ModalProps {
 }
 const Modal: React.FC<ModalProps> = ({ closeModal }) => {
   return (
-      <animated.div >
+      <animated.div className={styles.modal}>
         <h3 className="modal-title">Modal title </h3>
         <p className="modal-content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolores

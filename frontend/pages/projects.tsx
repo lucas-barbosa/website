@@ -5,8 +5,8 @@ import type { GetStaticProps, GetStaticPropsContext } from "next";
 
 // components
 import Head from "next/head";
-import HeroSection from "../components/projects/heroSection";
-import Dashboard from "../components/projects/dashboard";
+import HeroSection from "../components/projects/hero/index";
+import Dashboard from "../components/projects/dashboard/index";
 
 export interface ProjectsProps {
   categories: {

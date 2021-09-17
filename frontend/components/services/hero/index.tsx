@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/services/hero.module.scss";
+import styles from "../../../styles/services/hero.module.scss";
 
 // components
 import Link from "next/link";

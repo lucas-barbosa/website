@@ -4,8 +4,8 @@ import React from "react";
 
 // components
 import Head from "next/head";
-import Dashboard from "../components/services/dashboard";
-import HeroSection from "../components/services/heroSection";
+import Dashboard from "../components/services/dashboard/index";
+import HeroSection from "../components/services/hero/index";
 
 const DigitalService: NextPage = () => {
   return (
