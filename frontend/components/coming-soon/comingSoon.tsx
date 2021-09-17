@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../../styles/docs/hero.module.scss";
+import styles from "../../styles/coming-soon/coming-soon.module.scss";
 import moment from "moment";
 
 const ComingSoon: React.FC = () => {

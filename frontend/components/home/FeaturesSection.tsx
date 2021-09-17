@@ -13,7 +13,7 @@ const FeaturesSection: React.FC = () => {
         <h1 className="text-center">Check our Features</h1>
       </div>
       <div className="row justify-content-between justify-content-lg-center">
-        <div className="col-md-6 col-12 col-lg-4 col-xxl-3 d-flex flex-column justify-content-center justify-content-md-startpe-5 ps-5  pe-5 pe-md-0 ps-5 pt-4">
+        <div className="col-md-6 col-12 col-lg-5 col-xxl-3 d-flex flex-column justify-content-center justify-content-md-startpe-5 ps-5  pe-5 pe-md-0 ps-5 pt-4">
           <p className="text-white lead text-center text-md-start">
             digital service
           </p>
@@ -44,7 +44,7 @@ const FeaturesSection: React.FC = () => {
         <div className="col-md-6  col-12 d-md-block col-sm-12 pt-4">
           <div className="row justify-content-center">
           <p className="text-white lead text-center text-md-start col-12 col-lg-7">
-            Some of my tools
+            Some of my Tools
           </p>
           </div>
           <div className="row justify-content-center justify-content-md-start justify-content-lg-center align-items-between">

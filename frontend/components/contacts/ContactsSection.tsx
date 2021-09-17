@@ -29,16 +29,16 @@ const ContacsSection: React.FC = () => {
           .trim()
           .required("username is required"),
         subject: Yup.string()
-        .min(8, "subject should be at least 8 characters")
-        .max(50, "subject should at most than 50 characters")
-        .trim()
-        .required("subject is required"),
+          .min(8, "subject should be at least 8 characters")
+          .max(50, "subject should at most than 50 characters")
+          .trim()
+          .required("subject is required"),
         message: Yup.string()
-        .min(20, "message should be at least 20 characters")
-        .max(300, "message should be at most 300 characters")
+          .min(20, "message should be at least 20 characters")
+          .max(300, "message should be at most 300 characters")
           .trim()
           .required("message is required"),
-        }),
+      }),
       onSubmit: async (data) => {
         try {
           setSending(true);
@@ -57,13 +57,13 @@ const ContacsSection: React.FC = () => {
         }
       },
     });
-    
-    const clearFromInputes = () =>{
-      values.email = "";
-      values.username = "";
-      values.subject = "";
-      values.message = ""
-    }
+
+  const clearFromInputes = () => {
+    values.email = "";
+    values.username = "";
+    values.subject = "";
+    values.message = "";
+  };
   return (
     <React.Fragment>
       <section id="contact" className={`${styles.contacts} bg-light pt-4 pb-5`}>
@@ -71,15 +71,15 @@ const ContacsSection: React.FC = () => {
           <div className="section-title">
             <div className={styles.title}>
               <i className="bi bi-chat-right-text fs-1 p-2 text-black"></i>
-              <h2 className={styles.titleHeader}>Contact Us</h2>
+              <h2 className={styles.titleHeader}>Contact Me</h2>
             </div>
             <p className={styles.subTitle}>
-              Contact Us by fill this message box
+              Contact Me by filling this message box
             </p>
           </div>
 
           <div className="row justify-content-center">
-            <div className={`${styles.infoTable} col-lg-5 d-flex `}>
+            <div className={`${styles.infoTable} col-lg-5 d-flex`}>
               <div className={styles.info}>
                 <div className={styles.address}>
                   <i className={`bi bi-geo-alt ${styles.infoIcon}`}></i>
@@ -108,7 +108,9 @@ const ContacsSection: React.FC = () => {
               </div>
             </div>
 
-            <div className={`${styles.formTable} col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch`}>
+            <div
+              className={`${styles.formTable} col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch`}
+            >
               <form
                 onSubmit={handleSubmit}
                 role="form"
@@ -134,7 +136,10 @@ const ContacsSection: React.FC = () => {
                         aria-describedby="addon-wrapping"
                       />
                       {touched.username && errors.username ? (
-                        <p className={`${styles.errors} lead text-danger`}>{errors.username}</p>
+                        <p className={`${styles.errors} lead text-danger`}>
+                          <i className="bi bi-exclamation-circle-fill text-danger d-inline me-2"></i>
+                          {errors.username}
+                        </p>
                       ) : null}
                     </div>
                   </div>
@@ -156,7 +161,10 @@ const ContacsSection: React.FC = () => {
                         aria-describedby="addon-wrapping"
                       />
                       {touched.email && errors.email ? (
-                        <p className={`${styles.errors} lead text-danger`}>{errors.email}</p>
+                        <p className={`${styles.errors} lead text-danger`}>
+                          <i className="bi bi-exclamation-circle-fill text-danger me-2"></i>
+                          {errors.email}
+                        </p>
                       ) : null}
                     </div>
                   </div>
@@ -179,7 +187,10 @@ const ContacsSection: React.FC = () => {
                       aria-describedby="addon-wrapping"
                     />
                     {touched.subject && errors.subject ? (
-                      <p className={`${styles.errors} lead text-danger`}>{errors.subject}</p>
+                      <p className={`${styles.errors} lead text-danger`}>
+                        <i className="bi bi-exclamation-circle-fill text-danger d-inline me-2"></i>
+                        {errors.subject}
+                      </p>
                     ) : null}
                   </div>
                 </div>
@@ -194,7 +205,10 @@ const ContacsSection: React.FC = () => {
                     rows={10}
                   ></textarea>
                   {touched.message && errors.message ? (
-                    <p className={`${styles.message} lead text-danger`}>{errors.message}</p>
+                    <p className={`${styles.message} lead text-danger ms-2`}>
+                      <i className="bi bi-exclamation-circle-fill text-danger me-2"></i>
+                      {errors.message}
+                    </p>
                   ) : null}
                 </div>
                 <div className="text-center mt-4">

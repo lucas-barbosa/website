@@ -1,0 +1,44 @@
+.allButton {
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  transition: all 0.1s !important;
+}
+
+.buttons {
+  font-size: 1.1rem !important;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  transition: all 0.1s !important;
+}
+
+.count {
+  font-size: 1rem;
+  border-left: 2px solid #000;
+  border-radius: 0px;
+}
+
+.buttons:hover,
+.allButton:hover {
+  box-shadow: -4px 4px 0 #000;
+  transform: translate(4px, -4px);
+}
+
+@media (max-width: 1296px) {
+  .buttons {
+    font-size: 1rem !important;
+  }
+  .counts {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1000px) {
+  .buttons {
+    font-size: 14px !important;
+    padding: 4px 4px 4px 6px !important;
+  }
+  .counts {
+    font-size: 13px;
+  }
+}

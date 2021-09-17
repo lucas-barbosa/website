@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
       content: "alguero development image 👨🏻‍💻",
       theme: "light",
     });
-  });
+  },[]);
   return (
     <React.Fragment>
       <section

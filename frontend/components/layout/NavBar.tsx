@@ -66,13 +66,14 @@ const NavBar: React.FC = () => {
         <div className="container-lx d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <Link href="/">
-              <a className="mt-5">
+              <a className="d-flex flex-row align-items-center justify-content-center">
                 <Image
                   src="/images/favicon.png"
-                  width="65"
-                  height="70"
+                  width="70"
+                  height="75"
                   alt="alguerocode logo image"
                 />
+                <h4 className="logo-title">Alguerocode</h4>
               </a>
             </Link>
           </h1>

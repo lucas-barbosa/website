@@ -1,0 +1,25 @@
+.projects {
+  height: 1000px;
+  border-left: 3px solid #000;
+  border-radius: 0px !important;
+  overflow-x: hidden;
+}
+
+.projectLink {
+  transition: all 0.2s !important;
+  border: 3px solid #000 !important;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+.projectLink:hover {
+  box-shadow: -8px 8px 0 #000;
+  transform: translate(6px, -6px);
+}
+
+@media (max-width: 780px) {
+  .projects {
+    border-left: 0px !important;
+    border-radius: 0px !important;
+    width: 100%;
+  }
+}
