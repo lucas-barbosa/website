@@ -10,10 +10,10 @@ const DocsSection: React.FC = () => {
     <React.Fragment>
       <section id="documents" className={styles.documents}>
         <div className="row">
-          <div className="col-md-6 col-sm-10 d-flex flex-column justify-content-center align-items-center ps-5 pt-4">
+          <div className="col-md-6 col-sm-10 d-flex flex-column justify-content-center align-items-center ps-5 pt-4" data-aos="fade-right">
            <Image src="/images/documents.png" height="400" width="400" alt="alguerocode vectro image for documents section"/>
           </div>
-          <div className="col-md-6 col-sm-10 d-flex flex-column pt-5 ms-sm-4 ms-md-0 ps-5 justify-content-xl-center">
+          <div className="col-md-6 col-sm-10 d-flex flex-column pt-5 ms-sm-4 ms-md-0 ps-5 justify-content-xl-center" data-aos="fade-down">
               <p className="lead">documents</p>
               <h1 className="mb-4">coming soon!</h1>
                <h5>

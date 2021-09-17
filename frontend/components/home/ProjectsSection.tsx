@@ -9,7 +9,7 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className="row justify-content-xl-end">
-        <div className="col-md-5 col-sm-10 d-flex flex-column justify-content-start ps-5 pt-5 ms-xl-5">
+        <div className="col-md-5 col-sm-10 d-flex flex-column justify-content-start ps-5 pt-5 ms-xl-5" data-aos="fade-right">
           <p className={`${styles.title} lead`}>Projects</p>
           <h3 className="pt-2">this page is about showing my</h3>
           <ul>
@@ -35,6 +35,7 @@ const ProjectsSection: React.FC = () => {
         <div className={`${styles.blocks} col-md-5 col-sm-12 d-flex flex-column mt-5 ms-4 me-lg-5`}>
           <Link href={`${process.env.github} `}>
             <a
+              data-aos="fade-down"
               className={`${styles.github} d-flex flex-column justify-content-center align-items-center`}
             >
               <Image
@@ -48,14 +49,14 @@ const ProjectsSection: React.FC = () => {
             </a>
           </Link>
           <div className="d-flex mt-3 flex-column flex-lg-row">
-            <div className={`${styles.box} me-0 me-lg-2`}>
+            <div className={`${styles.box} me-0 me-lg-2`} data-aos="fade-up-right">
               <h6>SKILLS</h6>
               <h4 className="fs-5">
                 Hello I am full stack web develper, master javascript
                 language
               </h4>
             </div>
-            <div className={`${styles.box} ms-0 ms-lg-2 mt-3 mt-lg-0`}>
+            <div className={`${styles.box} ms-0 ms-lg-2 mt-3 mt-lg-0`} data-aos="fade-up-left">
               <h6>SKILLS</h6>
               <h4>
                 my favorite web development stack is MERN: (mongoDB, expressJS,

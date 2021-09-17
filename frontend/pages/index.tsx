@@ -18,6 +18,7 @@ const Home: NextPage = () => {
         <meta title="Alguerocode Home" />
         <meta name="keywords" content="coding, web development, programming, javascript, projects , github, profiles, Home, landing page,alguerocode, alguero"/>
         <meta name="description" content="alguerocode landing page, figure out the intersting things about me , projects, products, documents, tools and languages I use in web developemnt, coding and programming ,alguerocode"/>
+        <script src="/aos/index.js" defer></script>
       </Head>
       <HeroSection />
       <AboutSection />

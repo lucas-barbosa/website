@@ -8,7 +8,7 @@ const CountsSection: React.FC = () => {
       <h2 className="mb-4 text-center">My development work</h2>
         <div className="container-lg">
           <div className="row">
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-3 col-md-6" data-aos="fade-right">
               <div className={styles.countBox}>
                 <h6>STATES</h6>
                 <h4>happy digital clients</h4>
@@ -17,7 +17,7 @@ const CountsSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div className="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up-right">
               <div className={styles.countBox}>
                 <h6>STATES</h6>
                 <h4>my achieved projects</h4>
@@ -28,7 +28,7 @@ const CountsSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up-left">
               <div className={styles.countBox}>
                 <h6>STATES</h6>
                 <h4>coding years experiens</h4>
@@ -39,7 +39,7 @@ const CountsSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-left">
               <div className={styles.countBox}>
                 <h6>STATES</h6>
                 <h4>offering digital tasks</h4>
