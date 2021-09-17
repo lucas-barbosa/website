@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../../../styles/projects/dashboard/projects.module.scss";
 import { Projects } from "./index";
@@ -8,6 +8,9 @@ interface ProjectsTableProps {
   projectFetchError: boolean | string;
   projectsTableEl: object;
   curProjects: Projects;
+  modalOpen: boolean;
+  close: () => void;
+  open: () => void;
 }
 
 const ProjectsTable: React.FC<ProjectsTableProps> = ({
@@ -15,6 +18,9 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({
   projectsTableEl,
   projectFetchError,
   curProjects,
+  modalOpen,
+  close,
+  open,
 }) => {
   return (
     <div
@@ -32,24 +38,21 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({
           <div className="spinner-border text-dark mt-5" role="status" />
         ) : !projectFetchError ? (
           curProjects?.map((project) => (
-            <a
-              href={`https://github.com/alguerocode/${project.repoName}`}
-              // onClick={() => setModalVisible(true)}
+            <button
+              onClick={() => (modalOpen ? close() : open())}
               className={`${styles.projectLink} my-2`}
-              rel="noreferrer"
-              target="_blank"
               key={project._id}
             >
               <Image
                 unoptimized={true}
                 className="bg-white"
                 width="690"
-                height="200"
+                height="190"
                 loader={({ src }) => src}
                 src={`https://gh-card.dev/repos/alguerocode/${project.repoName}.svg?fullname=`}
                 alt={`alguero github repository : ${project.repoName}`}
               />
-            </a>
+            </button>
           ))
         ) : (
           <div className="d-flex align-items-center justify-content-center flex-column">

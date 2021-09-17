@@ -1,13 +1,14 @@
-import React, { useState, useEffect, FormEvent, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import type { ProjectsProps as DashboardProps } from "../../../pages/projects";
+import { AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { API } from "../../../api/axios";
 import styles from "../../../styles/projects/dashboard/index.module.scss";
-import tippy from "tippy.js";
 
 // components
 import Categories from "./Categories";
 import ProjectsTable from "./Projects";
+import Modal from "../../modal/Modal";
 
 export type Projects = {
   _id: string;
@@ -22,7 +23,10 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
   const [isPending, setPending] = useState<boolean>(false);
   const [projectFetchError, setError] = useState<boolean | string>(false);
   const projectsTableEl = useRef<HTMLDivElement | any>();
-  // const [modalVisible, setModalVisible] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const open = () => setModalOpen(true);
+  const close = () => setModalOpen(false);
 
   const curProjects: Projects = useMemo(() => {
     // filter projects by category when category is changed
@@ -61,18 +65,6 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
         setError(err.message);
         setPending(false);
       });
-
-    // add tooltip to projects image
-    tippy(`.${styles.projectImg}`, {
-      content: "<h6 class='text-muted'> 💌🙂 subscribe</h6>",
-      animation: "perspective-subtle",
-      placement: "bottom",
-      theme: "light",
-      maxWidth: 195,
-      allowHTML: true,
-      delay: [400, 0],
-      hideOnClick: true,
-    });
     return () => source.cancel("request cancled");
   }, []);
 
@@ -90,7 +82,13 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
             projectsTableEl={projectsTableEl}
             projectFetchError={projectFetchError}
             curProjects={curProjects}
+            modalOpen={modalOpen}
+            close={close}
+            open={open}
           />
+          <AnimatePresence initial={false} exitBeforeEnter={true}>
+            {modalOpen && <Modal handleClose={close} text="welcome there" />}
+          </AnimatePresence>
         </div>
       </section>
     </React.Fragment>

@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="btn btn-view btn-primary text-white fs-5 m-1 p-2 px-3 lead"
+                className="btn btn-view btn-primary text-white fs-5 m-1 p-2 lead"
               >
                 view projects
                 <i className="bi bi-arrow-right-short m-1 fs-5"></i>
@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="btn btn-github  btn-primary text-white m-1 fs-5 p-2 px-3 lead ms-0 ms-md-3"
+                className="btn btn-github  btn-primary text-white m-1 fs-5 p-2 lead ms-0 ms-md-3"
               >
                 <i className="bi bi-github m-1 fs-5"></i> Github profile
               </motion.button>

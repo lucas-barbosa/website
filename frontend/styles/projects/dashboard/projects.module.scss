@@ -8,6 +8,7 @@
 .projectLink {
   transition: all 0.2s !important;
   border: 3px solid #000 !important;
+  box-sizing: border-box;
   background-color: rgb(255, 255, 255);
 }
 .projectLink:hover {

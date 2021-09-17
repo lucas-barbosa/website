@@ -1,24 +1,45 @@
 import React from "react";
-import { animated } from "react-spring";
 import styles from "../../styles/modal/modal.module.scss";
+import Backdrop from "./Backdrop";
+import { motion } from "framer-motion";
 
 interface ModalProps {
-  closeModal: any;
+  handleClose: () => void;
+  text: string;
 }
-const Modal: React.FC<ModalProps> = ({ closeModal }) => {
+const dropIn = {
+  hidden: {
+    y: "-100vh",
+    opacity: 0,
+  },
+  visible: {
+    y: "0",
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      type: "spring",
+      damping: 25,
+      stiffness: 500,
+    },
+  },
+  exit: {
+    y: "50vh",
+    opacity: 0,
+  },
+};
+const Modal: React.FC<ModalProps> = ({ handleClose, text }) => {
   return (
-      <animated.div className={styles.modal}>
-        <h3 className="modal-title">Modal title </h3>
-        <p className="modal-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolores
-          molestias praesentium impedit. Facere, perferendis voluptate at, amet
-          excepturi ratione mollitia nemo ipsum odit impedit doloremque rerum.
-          Quisquam, dolorum at?
-        </p>
-        <button className="modal-close-button" onClick={closeModal}>
-          Close
-        </button>
-      </animated.div>
+    <Backdrop handleClose={handleClose}>
+      <motion.div
+        onClick={(e) => e.stopPropagation()}
+        className={styles.modal}
+        variants={dropIn}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      ><button onClick={handleClose}>close</button></motion.div>
+      
+    </Backdrop>
   );
 };
 
