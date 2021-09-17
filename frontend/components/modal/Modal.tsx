@@ -58,7 +58,7 @@ const Modal: React.FC<ModalProps> = ({ handleClose, curSelectedProject }) => {
               }
             >
               {curSelectedProject.categories.map((category) => (
-                <div className={styles.category}>#{category}</div>
+                <div className={styles.category} key={category}>#{category}</div>
               ))}
             </div>
             <div className="d-flex flex-row justify-content-between align-items-center mb-3">
