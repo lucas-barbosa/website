@@ -28,6 +28,16 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
   const open = () => setModalOpen(true);
   const close = () => setModalOpen(false);
 
+  const handleSetCategory = (value: string) => {
+    // after click on any category, scroll to project table top
+    if(typeof document !== 'undefined') {
+      const projectsTableEl = document.querySelector<HTMLDivElement>(".projects-table");
+      projectsTableEl?.scrollTop && projectsTableEl?.scrollTop > 0 && projectsTableEl?.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    setCategory(value);
+  };
+
   const curProjects: Project[] = useMemo(() => {
     // filter projects by category when category is changed
     if (category === "") return allProjects;
@@ -35,12 +45,6 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
     const filterdProjects = allProjects.filter((project) => {
       return project.categories.includes(category);
     });
-
-    // projects table and scroll to top
-    if(typeof document !== undefined) {
-      const projectsTableEl = document.querySelector<HTMLDivElement>(".projects-table")
-      projectsTableEl?.scrollTop && projectsTableEl?.scrollTop > 0 && projectsTableEl?.scrollTo({ top: 0, behavior: "smooth" })
-    }
 
     return filterdProjects;
   }, [category, allProjects]);
@@ -76,7 +80,7 @@ const Dashboard: React.FC<DashboardProps> = ({ categories }) => {
           <Categories
             isPending={isPending}
             categories={categories}
-            setCategory={setCategory}
+            setCategory={handleSetCategory}
           />
           <ProjectsTable
             isPending={isPending}
